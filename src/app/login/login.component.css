@@ -15,6 +15,11 @@
   overflow: auto;
 }
 
+.subtitle {
+  font-size: 14px;
+  color: #434560;
+}
+
 .login-pic {
   width: 330px;
   height: 530px;
