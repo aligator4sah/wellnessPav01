@@ -1,0 +1,77 @@
+
+.left-side {
+  left: 0px;
+  width: 40%;
+  height: 530px;
+  float: left;
+}
+
+.right-side {
+  right: 0px;
+  width: 60%;
+  height: 530px;
+  float: left;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.login-pic {
+  width: 330px;
+  height: 530px;
+}
+
+.login-form {
+  height: 60%;
+  top: 10px;
+  bottom: 10px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.input-form {
+  width: 400px;
+  left: 10%;
+  right: 10%;
+}
+
+.ui-dropdown {
+  width: 90%;
+  height: 35px;
+}
+
+p-dropdown {
+  font-size: 16px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+.forgetPsd {
+  font-size: 14px;
+  color: #434560;
+  border: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+.submit-button {
+  width: 290px;
+  height: 35px;
+  font-size: 16px;
+}
+
+.basic-container {
+  width:700px;
+  height:530px;
+  top: 48%;
+  left: 50%;
+  /*border-radius:15px;*/
+  background: #434560;
+}

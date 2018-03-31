@@ -1,0 +1,36 @@
+<div class="login-main">
+  <div class="basic-container mid-position">
+    <div class="left-side">
+      <img src="../../assets/login.jpg" class="login-pic">
+    </div>
+    <div class="right-side">
+      <div class="login-form">
+        <h4 class="subtitle">Welcome guest!</h4>
+        <br>
+        <h2>Sign in to Wellness Pavilion</h2>
+        <br><br>
+          <div class="ui-g-12 ui-md-12" style="height:35px">
+            <div class="ui-inputgroup" style="height:35px">
+              <span class="ui-inputgroup-addon" style="height:35px; width:20px;"><i class="fa fa-user"></i></span>
+              <input type="text" pInputText placeholder="Username" class="ui-md-10" style="height:35px">
+            </div>
+            <br>
+            <div class="ui-inputgroup" style="height:35px">
+              <span class="ui-inputgroup-addon" style="height:35px; width:20px;"><i class="fa fa-key"></i></span>
+              <input type="text" pInputText placeholder="Password" class="ui-md-10" style="height:35px">
+            </div>
+            <br>
+            <div class="ui-inputgroup" style="height:35px">
+              <p-dropdown [options]="roles" [(ngModel)]="selectedRole" optionLabel="label" [style]="{'width':'290px','height':'35px'}"></p-dropdown>
+            </div>
+            <br>
+            <a routerLink="" class="forgetPsd">Forget Password?</a>
+            <br> <br>
+            <button pButton type="button" class="ui-button-secondary" class="submit-button" label="Sign In"></button>
+          </div>
+          <br>
+
+      </div>
+    </div>
+  </div>
+</div>
