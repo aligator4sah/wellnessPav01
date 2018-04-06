@@ -1,75 +1,60 @@
-<div class="head-bar clearfix">
-  <a href="#" id="menu-button">
-    <span class="fa fa-angle-left">
-    </span>
-  </a>
+<div class="head-bar">
   <a href="#" class="logo-link">
-    <img src="../../../assets/icon_hospital.svg" class="logo">
+    <img src="../../../assets/health.png" class="wellness-icon">
     <span class="logo-text">Wellness Pavilion</span>
   </a>
-
-  <a href="#" id="right-menu-button">
-    <i class="fa fa-bars"></i>
+  <a href="#" class="right-menu-button">
+    <i class="fa fa-align-left"></i>
   </a>
-  <ul class="head-bar-menu fadeInDown">
-    <li class="menu-icon">
-      <div class="ui-inputgroup">
-        <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
-        <input pInputText placeholder="Search" type="text" class="ui-inputtext">
-      </div>
-    </li>
-    <li class="menu-icon">
+
+  <div class="right-side-group">
+    <div class="ui-inputgroup">
+      <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
+      <input pInputText placeholder="Search" type="text" class="ui-inputtext">
+    </div>
+    <div class="setting-button">
       <p-overlayPanel #op1>
-        <ul class>
-          <li role="menuitem">
-            <a href="#">
-              <i class="fa fa-fw fa-paint-brush"></i>
-              <span>Change Theme</span>
-            </a>
-          </li>
-          <li role="menuitem">
-            <a href="#">
-              <i class="fa fa-fw fa-lock"></i>
-              <span>Lock Screen</span>
-            </a>
-          </li>
-        </ul>
+        <li class="menu-options">
+          <a href="#">
+            <i class="fa fa-fw fa-paint-brush" style="padding-right: 10px"></i>
+            <span>Change Theme</span>
+          </a>
+        </li>
+        <li class="menu-options">
+          <a href="#">
+            <i class="fa fa-fw fa-lock" style="padding-right: 10px"></i>
+            <span>Lock Screen</span>
+          </a>
+        </li>
       </p-overlayPanel>
-      <i class="fa fa-fw fa-sliders" style="font-size: 20px" (click)="op1.toggle($event)"></i>
-      <!--<button pButton type="button" icon="fa-check" iconPos="center" (click)="op1.toggle($event)"></button>-->
-    </li>
+      <i class="fa fa-fw fa-sliders" style="font-size: 22px; color: white" (click)="op1.toggle($event)"></i>
+    </div>
 
-    <li class="menu-icon">
-
-      <a href="#">
-        <div class="profile-image">
-          <img src="../../../assets/user.png">
-        </div>
-        <span class="profile-text">Profile</span>
-      </a>
-      <ul class="fadeInDown">
-        <li role="menuitem">
+    <div class="user-profile">
+      <span class="user-name"><strong>Jane Doe</strong></span>
+      <img src="../../../assets/user.png" class="user-photo">
+      <p-overlayPanel #op2>
+        <li class="menu-options">
           <a href="#">
-            <i class="fa fa-fw fa-user"></i>
-            <span>Profile</span>
+            <i class="fa fa-fw fa-user" style="padding-right: 10px"></i>
+            <span style="padding-right: 20px">Profile</span>
             <span class="head-bar-submenuitem-badge">5</span>
           </a>
         </li>
-        <li role="menuitem">
+        <li class="menu-options">
           <a href="#">
-            <i class="fa fa-fw fa-user-secret"></i>
-            <span>Privacy</span>
-            <span class="head-bar-submenuitem-badge">5</span>
+            <i class="fa fa-fw fa-cog" style="padding-right: 10px"></i>
+            <span style="padding-right: 20px">Setting</span>
           </a>
         </li>
-        <li role="menuitem">
+        <li class="menu-options">
           <a href="#">
-            <i class="fa fa-fw fa-cog"></i>
-            <span>Settings</span>
+            <i class="fa-fw fa-user-secret" style="padding-right: 10px"></i>
+            <span style="padding-right: 20px">Roles</span>
           </a>
         </li>
-      </ul>
-    </li>
-  </ul>
-
+      </p-overlayPanel>
+      <i class="fa fa-angle-down" style="font-size: 20px; color: white; padding-top: 4px; margin-left: 5px" (click)="op2.toggle($event)"></i>
+    </div>
+  </div>
 </div>

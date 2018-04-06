@@ -5,11 +5,11 @@ import {AccordionModule, CalendarModule, DropdownModule, InputTextModule, Overla
 import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-font-awesome';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import {MenuModule} from 'primeng/menu';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgZorroAntdModule,
     AccordionModule,
     CalendarModule,
     CardModule,
@@ -17,19 +17,20 @@ import {ButtonModule} from 'primeng/button';
     DropdownModule,
     ButtonModule,
     OverlayPanelModule,
+    MenuModule,
     AngularFontAwesomeModule
   ],
   declarations: [
   ],
   exports: [
     CommonModule,
-    NgZorroAntdModule,
     AccordionModule,
     CalendarModule,
     CardModule,
     InputTextModule,
     DropdownModule,
     ButtonModule,
+    MenuModule,
     OverlayPanelModule,
     AngularFontAwesomeModule
   ]

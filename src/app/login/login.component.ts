@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SelectItem} from 'primeng/api';
+import {Router} from '@angular/router';
 
 interface Role {
   value: string;
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   value: Date;
 
-  constructor() {
+  constructor(public route: Router) {
     this.roles = [
       {value: null, label: 'Select Role'},
       { value: 'Admin', label: 'Administrator' },
@@ -38,6 +39,9 @@ export class LoginComponent implements OnInit {
         { value: 'FrontDesk', label: 'Front Desk' }
       ];
     }, 100);
+  }
+  login() {
+      this.route.navigateByUrl('dashBoard');
   }
 
 }

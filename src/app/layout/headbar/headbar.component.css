@@ -6,68 +6,108 @@
 /*}*/
 
 .head-bar {
-  height: 60px;
+  background-color: #3c989e;
+  height: 50px;
   position: fixed;
+  top: 0px;
   width: 100%;
+  z-index: 102;
   box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px 0px;
-  z-index: 1000;
-  background: rgb(255, 255, 255);
+  padding: 5px 30px;
+  display: inline-block;
 }
 
-div {
-  display: block;
-}
 
-.head-bar #menu-button {
-  text-align: center;
-  width: 59px;
-  height: 60px;
-  line-height: 60px;
-  border-right: solid 1px #e0e0e0;
-  color: #777777;
-  float: left;
-}
-
-.head-bar #menu-button span {
-  font-size: 36px;
-  line-height: inherit;
-  transition: all .3s;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.head-bar .logo-link {
+.logo-link {
+  position: fixed;
+  top: 6px;
   vertical-align: middle;
-  line-height: 60px;
-  margin-left: 20px;
+  margin-left: 40px;
+  height: 30px;
 }
 
-.logo-link .logo {
-  vertical-align: middle;
-  height: 28px;
-  margin-top: -7px;
+.wellness-icon {
+  width: 40px;
+  height: 40px;
+  left: 35px;
+  top: 5px;
+  position: fixed;
 }
 
-.logo-link .logo-text {
-  color: #6ec5ff;
+.logo-text {
+  color: #ffffff;
   font-size: 22px;
   font-weight: 700;
   padding-left: 5px;
+  top: 10px;
+  left: 70px;
+  position: fixed;
 }
 
-.head-bar #right-menu-button {
-  font-size: 28px;
-  display: none;
-  float: right;
-  color: rgb(255, 255, 255);
-  margin: 12px 20px 0px 0px;
-  transition: color 0.3s;
+.right-menu-button {
+  font-size: 30px;
+  color: white;
+  left: 265px;
+  top: 5px;
+  position: fixed;
 }
 
+
+.right-side-group {
+  padding-left: 60%;
+  padding-right: 5%;
+  padding-top: 8px;
+  display: inline-block;
+}
+
+.ui-inputgroup {
+  width: 180px;
+  padding-right: 5px;
+  float: left;
+}
+
+.setting-button {
+  float: left;
+  padding-top: 2px;
+}
+
+.menu-options {
+  list-style-type: none;
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.user-profile {
+  float: left;
+  display: inline-block;
+}
+
+.user-name {
+  font-size: 16px;
+  color: #ffffff;
+  top: 6px;
+  margin-left: 10px;
+  margin-right: 5px;
+  float: left;
+}
+
+.user-photo {
+  width: 30px;
+  height: 30px;
+  float: left;
+  padding-top: 1px;
+  margin-left: 3px;
+  margin-right: 5px;
+}
+
+.profile-menu {
+  margin-left: 3px;
+  padding-top: 5px;
+  color: white;
+  font-size: 18px;
+  float: left;
+}
 /*li.search-item input {*/
   /*color: rgb(119, 119, 119);*/
   /*border-top-color: initial;*/
@@ -121,12 +161,6 @@ div {
   display: inline-block;
 }
 
-.head-bar-menu > li > ul a .head-bar-submenuitem-badge {
-  background-color: rgb(110, 197, 255);
-  color: rgb(255, 255, 255);
-  float: right;
-  padding: 1px 6px;
-}
 
 ul, menu, dir {
   display: block;
@@ -142,17 +176,6 @@ li {
   display: list-item;
 }
 
-.head-bar-menu > li > a .head-bar-icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px;
-  font-size: 20px;
-}
-
-.head-bar-menu > li > a .head-bar-item-name {
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .menu-icon {
   float: left;
