@@ -5,18 +5,29 @@
   background-color: lightgrey;
 }
 
-.menu .ui-megamenu .ui-widget .ui-widget-content .ui-corner-all .ui-megamenu-vertical {
+:host >>> .ui-megamenu {
+  margin-top: 1px;
   width: 100%;
 }
 
-.menu .ui-megamenu {
-  width: 100%;
+:host >>> .ui-menu-list {
+  height: 100px;
 }
 
-.menu .ui-megamenu-vertical {
-  width: 100%;
+:host >>> .ui-menuitem {
+  height: 50px;
+  align-content: center;
+  justify-content: flex-start;
 }
 
-.menu .ui-menuitem {
-  width: 200px;
+:host >>> .ui-menuitem-text {
+  font-size: 16px;
+  margin-left: 3%;
+  padding-left: 8%;
 }
+
+:host >>> .ui-menuitem-icon {
+  font-size: 16px;
+  padding-left: 9%;
+}
+
