@@ -24,6 +24,8 @@
   vertical-align: middle;
   margin-left: 40px;
   height: 30px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .wellness-icon {
@@ -32,6 +34,7 @@
   left: 35px;
   top: 5px;
   position: fixed;
+  padding-right: 5px;
 }
 
 .logo-text {
@@ -44,20 +47,19 @@
   position: fixed;
 }
 
+.right-side-group {
+  padding-right: 3%;
+  padding-top: 8px;
+  display: inline-flex;
+  float: right;
+  align-self: flex-end;
+  align-content: center;
+}
+
 .right-menu-button {
   font-size: 30px;
   color: white;
-  left: 265px;
   top: 5px;
-  position: fixed;
-}
-
-
-.right-side-group {
-  padding-left: 60%;
-  padding-right: 5%;
-  padding-top: 8px;
-  display: inline-block;
 }
 
 .ui-inputgroup {

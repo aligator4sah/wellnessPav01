@@ -1,56 +1,31 @@
 <div class="head-bar">
-  <a href="#" class="logo-link">
+  <a class="logo-link">
     <img src="../../../assets/health.png" class="wellness-icon">
     <span class="logo-text">Wellness Pavilion</span>
   </a>
-  <a href="#" class="right-menu-button">
-    <i class="fa fa-align-left"></i>
-  </a>
 
   <div class="right-side-group">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-search"></i></span>
-      <input pInputText placeholder="Search" type="text" class="ui-inputtext">
-    </div>
-    <div class="setting-button">
-      <p-overlayPanel #op1>
-        <li class="menu-options">
-          <a href="#">
-            <i class="fa fa-fw fa-paint-brush" style="padding-right: 10px"></i>
-            <span>Change Theme</span>
-          </a>
-        </li>
-        <li class="menu-options">
-          <a href="#">
-            <i class="fa fa-fw fa-lock" style="padding-right: 10px"></i>
-            <span>Lock Screen</span>
-          </a>
-        </li>
-      </p-overlayPanel>
-      <i class="fa fa-fw fa-sliders" style="font-size: 22px; color: white" (click)="op1.toggle($event)"></i>
-    </div>
-
     <div class="user-profile">
       <span class="user-name"><strong>Jane Doe</strong></span>
       <img src="../../../assets/user.png" class="user-photo">
       <p-overlayPanel #op2>
         <li class="menu-options">
           <a href="#">
-            <i class="fa fa-fw fa-user" style="padding-right: 10px"></i>
-            <span style="padding-right: 20px">Profile</span>
+            <i class="fa fa-fw fa-user" style="padding-right: 10px; font-size: 14px"></i>
+            <span style="padding-right: 20px; font-size: 14px">Profile</span>
             <span class="head-bar-submenuitem-badge">5</span>
           </a>
         </li>
         <li class="menu-options">
           <a href="#">
-            <i class="fa fa-fw fa-cog" style="padding-right: 10px"></i>
-            <span style="padding-right: 20px">Setting</span>
+            <i class="fa fa-fw fa-cog" style="padding-right: 10px; font-size: 14px"></i>
+            <span style="padding-right: 20px; font-size: 14px">Setting</span>
           </a>
         </li>
         <li class="menu-options">
           <a href="#">
-            <i class="fa-fw fa-user-secret" style="padding-right: 10px"></i>
-            <span style="padding-right: 20px">Roles</span>
+            <i class="fa-fw fa-user-secret" style="padding-right: 10px; font-size: 14px"></i>
+            <span style="padding-right: 20px; font-size: 14px">Log out</span>
           </a>
         </li>
       </p-overlayPanel>
