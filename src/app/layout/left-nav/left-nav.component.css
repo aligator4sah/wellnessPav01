@@ -1,120 +1,22 @@
-.layout-sidebar {
-  position: fixed;
-  top: 60px;
+.left-side-nav {
+  width: 16%;
+  padding-top: 50px;
   height: 100%;
-  width: 60px;
-  background-color: rgb(44, 44, 44);
-  z-index: 100;
-  transition: width 0.3s;
+  background-color: lightgrey;
 }
 
-.sidebar .layout-tabmenu {
-  height: 100%;
-  width: 60px;
-  position: relative;
-}
-
-.sidebar .layout-tabmenu .layout-tabmenu-nav {
-  text-align: center;
-  display: block;
-  padding: 0px;
-  margin: 0px;
+.menu .ui-megamenu .ui-widget .ui-widget-content .ui-corner-all .ui-megamenu-vertical {
   width: 100%;
 }
 
-/*ul, menu, dir {*/
-  /*display: block;*/
-  /*list-style-type: disc;*/
-  /*-webkit-margin-before: 1em;*/
-  /*-webkit-margin-after: 1em;*/
-  /*-webkit-margin-start: 0px;*/
-  /*-webkit-margin-end: 0px;*/
-  /*-webkit-padding-start: 40px;*/
-/*}*/
-
-li {
-  list-style-type: none;
-  text-align: center;
-  box-sizing: border-box;
-  display: list-item;
-}
-
-body a {
-  color: rgb(28, 120, 195);
-  text-decoration: none;
-}
-
-li a {
-  height: 60px;
+.menu .ui-megamenu {
   width: 100%;
-  box-sizing: border-box;
-  display: block;
 }
 
-.layout-tabmenu-nav li.active-item {
-  background-color: rgb(31, 31, 31);
+.menu .ui-megamenu-vertical {
+  width: 100%;
 }
 
-.layout-tabmenu .layout-tabmenu-nav li i {
-  line-height: 60px;
-  font-size: 22px;
-  color: rgb(255, 255, 255);
-  transition: color 0.3s;
-}
-
-.layout-tabmenu-nav li .layout-tabmenu-tooltip {
-  display: none;
-  position: relative;
-  left: 60px;
-  top: -38px;
-  z-index: 101;
-  padding: 0px 5px;
-}
-
-.layout-tabmenu-tooltip-arrow {
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  top: 50%;
-  left: 0px;
-  margin-top: -5px;
-  border-color: transparent rgb(135, 135, 135) transparent transparent;
-  border-style: solid;
-  border-width: 5px 5px 5px 0px;
-}
-
-.layout-tabmenu-tooltip-text {
-  background-color: rgb(135, 135, 135);
-  color: rgb(255, 255, 255);
-  min-width: 75px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px;
-  padding: 3px 10px;
-}
-
-.layout-sidebar .layout-tabmenu .layout-tabmenu-contents {
-  display: block;
-  transition: width 0.3s;
-}
-
-.layout-sidebar .layout-tabmenu .layout-tabmenu-contents {
-  position: absolute;
+.menu .ui-menuitem {
   width: 200px;
-  left: 60px;
-  top: 0px;
-  height: 100%;
-  background-color: rgb(31, 31, 31);
-  display: none;
 }
-
-.layout-tabmenu-nav li a {
-  height: 60px;
-  width: 100%;
-  box-sizing: border-box;
-  display: block;
-}
-
-.tabmenuitem-link {
-  width: 60px;
-  height: 60px;
-}
-
