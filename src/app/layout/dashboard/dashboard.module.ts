@@ -5,6 +5,7 @@ import {ShareModule} from '../../share/share.module';
 import {RouterModule} from '@angular/router';
 import {LeftNavModule} from '../left-nav/left-nav.module';
 import {HeadbarModule} from '../headbar/headbar.module';
+import {dashboardRoutes} from './dashboard.route';
 
 @NgModule({
   imports: [
@@ -12,9 +13,7 @@ import {HeadbarModule} from '../headbar/headbar.module';
     ShareModule,
     LeftNavModule,
     HeadbarModule,
-    RouterModule.forChild([
-      {path: '', component: DashboardComponent}
-    ])
+    RouterModule.forChild(dashboardRoutes)
   ],
   declarations: [DashboardComponent],
   exports: [

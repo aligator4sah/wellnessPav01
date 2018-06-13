@@ -14,23 +14,20 @@ export class LeftNavComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Patient', icon: 'fa fa-fw fa-check',
+        label: 'Patient', icon: 'fa fa-fw fa-user',
         items: [
           [
             {
-              label: 'TV 1',
-              items: [{label: 'TV 1.1'}, {label: 'TV 1.2'}]
+              label: 'Demographic',
             },
             {
-              label: 'TV 2'
-            }
-          ],
-          [
-            {
-              label: 'TV 3'
+              label: 'Encounters'
             },
             {
-              label: 'TV 4'
+              label: 'Questionnaire'
+            },
+            {
+              label: 'Response'
             }
           ]
         ]
@@ -40,34 +37,27 @@ export class LeftNavComponent implements OnInit {
         items: [
           [
             {
-              label: 'Sports 1',
-              items: [{label: 'Sports 1.1'}, {label: 'Sports 1.2'}]
+              label: 'Daily'
             },
             {
-              label: 'Sports 2',
-              items: [{label: 'Sports 2.1'}, {label: 'Sports 2.2'}]
+              label: 'Departments'
             },
 
-          ],
+          ]
+        ]
+      },
+      {
+        label: 'Analysis', icon: 'fa fa-fw fa-line-chart', routerLink: '',
+        items: [
           [
             {
-              label: 'Sports 3',
-              items: [{label: 'Sports 3.1'}, {label: 'Sports 3.2'}]
+              label: 'General',
+              routerLink: '',
             },
             {
-              label: 'Sports 4',
-              items: [{label: 'Sports 4.1'}, {label: 'Sports 4.2'}]
-            }
-          ],
-          [
-            {
-              label: 'Sports 5',
-              items: [{label: 'Sports 5.1'}, {label: 'Sports 5.2'}]
+              label: 'Individual'
             },
-            {
-              label: 'Sports 6',
-              items: [{label: 'Sports 6.1'}, {label: 'Sports 6.2'}]
-            }
+
           ]
         ]
       }
