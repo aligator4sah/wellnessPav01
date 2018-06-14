@@ -31,8 +31,16 @@ html {
   transform: translate(-50%, -50%);
 }
 
-
 .main-container {
-  width: 80%;
-  padding-left: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 1200px;
+  height: 90%;
+}
+
+.page-title {
+  color: #3c989e;
+  font-family: Verdana;
+  padding-bottom: 10px;
 }

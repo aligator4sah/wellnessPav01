@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import { MenuItem} from 'primeng/api';
+import {UserService} from './service/user.service';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { MenuItem} from 'primeng/api';
     BrowserAnimationsModule,
     NgZorroAntdModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

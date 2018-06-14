@@ -1,6 +1,30 @@
 <div class="main-container">
-  <p>
-    patient-table works!
-  </p>
+  <h2 class="page-title">Client Search Table</h2>
+  <p-card>
+    <p-header>
+      Header content here
+    </p-header>
+      <!--Clinet table content -->
+    <p-table [columns]="cols" [value]="clients">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns">
+            {{col.header}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-client let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">
+            {{client[col.field]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-footer>
+      Footer content here
+    </p-footer>
+  </p-card>
+
 </div>
 
