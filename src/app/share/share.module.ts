@@ -6,10 +6,13 @@ import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-fon
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AccordionModule,
     CalendarModule,
     CardModule,
@@ -24,6 +27,8 @@ import {MenuModule} from 'primeng/menu';
   ],
   exports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AccordionModule,
     CalendarModule,
     CardModule,
