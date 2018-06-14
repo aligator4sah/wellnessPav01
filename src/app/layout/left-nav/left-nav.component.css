@@ -1,7 +1,37 @@
+
 .left-side-nav {
   width: 100%;
   height: 100%;
-  background-color: lightgrey;
+  background-image: url('../../../assets/login.jpg');
+  background-size: cover;
+  opacity: 0.6;
+  /*background-color: #3c989e;*/
+}
+
+
+.main-menu {
+  height: 40%;
+}
+
+:host >>> .ui-toolbar{
+  height: 50px;
+  padding-bottom: 5px;
+  align-items: center;
+  color: #3c989e;
+}
+
+:host >>> .ui-toolbar-group-left {
+  padding-left: 20px;
+  padding-top: 6px;
+  align-items: baseline;
+}
+
+.search-section {
+  width: 90%;
+}
+
+:host >>> .ui-toolbar-group-right {
+  padding-top: 6px;
 }
 
 :host >>> .ui-megamenu {
@@ -36,4 +66,18 @@
 
 :host >>> .ui-megamenu-submenu-header {
   font-size: 14px;
+}
+
+:host >>> .ui-button-text {
+  font-size: 14px;
+}
+
+.footer {
+  padding-left: 20px;
+  top: 660px;
+  position: absolute;
+}
+
+.copy-right {
+  color: #000;
 }

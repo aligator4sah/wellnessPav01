@@ -50,7 +50,9 @@ export class LoginComponent implements OnInit {
       ];
     }, 100);
   }
+
   login() {
+      console.log(this.loginForm.value);
       this.route.navigateByUrl('dashBoard');
   }
 

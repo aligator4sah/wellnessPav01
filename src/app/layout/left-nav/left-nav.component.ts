@@ -8,11 +8,16 @@ import {MenuItem} from 'primeng/api';
 })
 export class LeftNavComponent implements OnInit {
   items: MenuItem[];
+  showSearch: boolean = false;
+  today = Date.now();
 
   constructor() { }
 
   ngOnInit() {
     this.items = [
+      {
+        label: 'Home', icon: 'fa fa-home'
+      },
       {
         label: 'Patient', icon: 'fa fa-fw fa-user',
         items: [
@@ -62,6 +67,14 @@ export class LeftNavComponent implements OnInit {
         ]
       }
     ];
+  }
+
+  showSearchBar() {
+    this.showSearch = !this.showSearch;
+  }
+
+  closeSearch() {
+    this.showSearch = false;
   }
 
 }

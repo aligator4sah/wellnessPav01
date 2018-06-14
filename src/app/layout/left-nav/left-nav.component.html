@@ -1,4 +1,32 @@
 <div class="left-side-nav">
-  <p-megaMenu [model]="items" [orientation]="'vertical'" styleClass="menu"></p-megaMenu>
+  <p-toolbar *ngIf="showSearch" class="top-bar">
+    <div class="ui-toolbar-group-left">
+      <div class="search-section">
+        <div class="ui-inputgroup">
+          <button pButton type="button" icon="fa fa-search" class="ui-button-success"></button>
+          <input type="text" pInputText placeholder="Search..." style="width: 230px;">
+          <button pButton type="button" icon="fa fa-times" class="ui-button-danger" (click)="closeSearch()"></button>
+        </div>
+      </div>
+    </div>
+  </p-toolbar>
+
+  <div class="main-menu">
+    <p-megaMenu [model]="items" [orientation]="'vertical'" styleClass="menu"></p-megaMenu>
+
+  <p-toolbar>
+    <div class="ui-toolbar-group-left">
+      <button pButton type="button" label="New" icon="fa fa-plus"></button>
+      <button pButton type="button" label="Search" icon="fa fa-search" class="ui-button-success" (click)="showSearchBar()"></button>
+    </div>
+  </p-toolbar>
+  </div>
+
+  <div class="footer">
+    <p class="copy-right">{{today | date:'yyyy'}}<span>@CopyRight</span></p>
+    <p class="copy-right" style="color: #3c989e">University of Pittsburgh</p>
+    <p class="copy-right">Version: 0.0.1</p>
+  </div>
+
 </div>
 
