@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../service/user.service';
+import {SelectItem} from 'primeng/api';
 
 @Component({
   selector: 'app-patient-table',
@@ -10,6 +11,9 @@ export class PatientTableComponent implements OnInit {
 
   clients = [];
   cols : any[];
+
+  genders: SelectItem[];
+  selectedColumns: any[];
 
   constructor(
     private userService: UserService,
@@ -26,6 +30,13 @@ export class PatientTableComponent implements OnInit {
       { field: 'gender', header: 'Gender'},
       { field: 'lastEncounter', header: 'Last Encounter'},
     ];
+
+    this.genders = [
+      {label: 'All genders', value: null},
+      {label: 'Male', value: 'Male'},
+      {label: 'Female', value: 'Female'}
+    ];
+    this.selectedColumns = this.cols;
   }
 
 }

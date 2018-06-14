@@ -1,15 +1,38 @@
 <div class="main-container">
   <h2 class="page-title">Client Search Table</h2>
   <p-card>
-    <p-header>
-      Header content here
+    <p-header class="sub-title">
     </p-header>
       <!--Clinet table content -->
-    <p-table [columns]="cols" [value]="clients">
+    <p-table #dt [columns]="selectedColumns" [value]="clients" [paginator]="true" [rows]="15" sortMode="multiple">
+      <!--global filter -->
+      <ng-template pTemplate="caption">
+        <div style="text-align:left">
+          <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                         selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
+        </div>
+        <div style="text-align: right">
+          <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+          <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+        </div>
+      </ng-template>
+
       <ng-template pTemplate="header" let-columns>
         <tr>
-          <th *ngFor="let col of columns">
+          <th *ngFor="let col of columns" [pSortableColumn]="col.field">
             {{col.header}}
+            <p-sortIcon [field]="col.field"></p-sortIcon>
+          </th>
+        </tr>
+        <!--filter for each column -->
+        <tr>
+          <th *ngFor="let col of columns">
+            <ng-container *ngIf="col.field === 'gender'; else inputBox">
+              <p-dropdown [options]="genders" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
+            </ng-container>
+            <ng-template #inputBox>
+              <input pInputText type="text" [style]="{'width':'100%'}" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+            </ng-template>
           </th>
         </tr>
       </ng-template>
@@ -20,9 +43,13 @@
           </td>
         </tr>
       </ng-template>
+
     </p-table>
     <p-footer>
-      Footer content here
+      <div class="button-group">
+        <button type="button" pButton icon="fa fa-file-o" iconPos="left" label="Export Data" (click)="dt.exportCSV()" style="float:left"></button>
+        <button type="button" pButton icon="fa fa-plus" class="ui-button-success" iconPos="left" label="Create"></button>
+      </div>
     </p-footer>
   </p-card>
 

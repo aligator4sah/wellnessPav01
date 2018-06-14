@@ -44,3 +44,8 @@ html {
   font-family: Verdana;
   padding-bottom: 10px;
 }
+
+
+.ui-button-text {
+  font-size: 14px;
+}

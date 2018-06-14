@@ -5,6 +5,7 @@ import {RouterModule} from '@angular/router';
 import {CardModule} from 'primeng/card';
 import {ShareModule} from '../../../share/share.module';
 import {TableModule} from 'primeng/table';
+import {MultiSelectModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import {TableModule} from 'primeng/table';
     CardModule,
     ShareModule,
     TableModule,
+    MultiSelectModule,
     RouterModule.forChild([
       {path: '', component: PatientTableComponent}
     ])
@@ -22,6 +24,7 @@ import {TableModule} from 'primeng/table';
     ShareModule,
     CommonModule,
     TableModule,
+    MultiSelectModule,
     CardModule,
     RouterModule,
   ]
