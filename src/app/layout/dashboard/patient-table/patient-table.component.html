@@ -5,12 +5,13 @@
     </p-header>
       <!--Clinet table content -->
     <p-table #dt [columns]="selectedColumns" [value]="clients" [paginator]="true" [rows]="15" sortMode="multiple">
-      <!--global filter -->
+      <!--select columns -->
       <ng-template pTemplate="caption">
         <div style="text-align:left">
           <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
                          selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" defaultLabel="Choose Columns"></p-multiSelect>
         </div>
+        <!--global filter -->
         <div style="text-align: right">
           <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
           <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">

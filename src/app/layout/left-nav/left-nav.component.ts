@@ -20,51 +20,51 @@ export class LeftNavComponent implements OnInit {
       },
       {
         label: 'Patient', icon: 'fa fa-fw fa-user',
-        items: [
-          [
-            {
-              label: 'Demographic',
-            },
-            {
-              label: 'Encounters'
-            },
-            {
-              label: 'Questionnaire'
-            },
-            {
-              label: 'Response'
-            }
-          ]
-        ]
+        // items: [
+        //   [
+        //     {
+        //       label: 'Demographic',
+        //     },
+        //     {
+        //       label: 'Encounters'
+        //     },
+        //     {
+        //       label: 'Questionnaire'
+        //     },
+        //     {
+        //       label: 'Response'
+        //     }
+        //   ]
+        // ]
       },
       {
         label: 'Appointments', icon: 'fa fa-fw fa-calendar',
-        items: [
-          [
-            {
-              label: 'Daily'
-            },
-            {
-              label: 'Departments'
-            },
-
-          ]
-        ]
+        // items: [
+        //   [
+        //     {
+        //       label: 'Daily'
+        //     },
+        //     {
+        //       label: 'Departments'
+        //     },
+        //
+        //   ]
+        // ]
       },
       {
-        label: 'Analysis', icon: 'fa fa-fw fa-line-chart', routerLink: '',
-        items: [
-          [
-            {
-              label: 'General',
-              routerLink: '',
-            },
-            {
-              label: 'Individual'
-            },
-
-          ]
-        ]
+        label: 'Analysis', icon: 'fa fa-fw fa-line-chart',
+        // items: [
+        //   [
+        //     {
+        //       label: 'General',
+        //       routerLink: '',
+        //     },
+        //     {
+        //       label: 'Individual'
+        //     },
+        //
+        //   ]
+        // ]
       }
     ];
   }

@@ -36,4 +36,4 @@ export const LNAMES = ['Hunter', 'Smith', 'Allison', 'Rains'];
 export const UNAMES = ['dsd123', 'dfw233', 'npr234', 'rop193'];
 export const DOB = ['12/23/1993', '04/22/1994', '07/12/1983', '02/23/1974'];
 export const GENDER = ['Female', 'Male'];
-export const LASTDATE= ['12/23/2017', '04/22/2018', '07/12/2017', '02/23/2018e'];
+export const LASTDATE= ['12/23/2017', '04/22/2018', '07/12/2017', '02/23/2018'];

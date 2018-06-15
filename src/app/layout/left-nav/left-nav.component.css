@@ -4,7 +4,7 @@
   height: 100%;
   background-image: url('../../../assets/login.jpg');
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.7;
   /*background-color: #3c989e;*/
 }
 
@@ -64,10 +64,6 @@
   padding-left: 9%;
 }
 
-:host >>> .ui-megamenu-submenu-header {
-  font-size: 14px;
-}
-
 :host >>> .ui-button-text {
   font-size: 14px;
 }
@@ -80,4 +76,5 @@
 
 .copy-right {
   color: #000;
+  font-size: 13px;
 }
