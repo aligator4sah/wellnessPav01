@@ -1,0 +1,30 @@
+.main-container {
+  margin-left: 20px;
+}
+
+.sub-title {
+  font-family: 'Verdana';
+  font-size: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+:host >>> .ui-panel {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+:host >>> .ui-panel-title {
+  font-size: 14px;
+  font-family: Verdana;
+}
+
+:host >>> .ui-inputtext {
+  height: 30px;
+}
+
+:host >>> .ui-dropdown {
+  width: 200px;
+}
