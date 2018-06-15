@@ -16,7 +16,10 @@ export class LeftNavComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Home', icon: 'fa fa-home'
+        label: 'Home',
+        icon: 'fa fa-home',
+        routerLink: '/dashBoard',
+        items: []
       },
       {
         label: 'Patient', icon: 'fa fa-fw fa-user',
@@ -47,7 +50,7 @@ export class LeftNavComponent implements OnInit {
             {
               label: 'Departments'
             },
-        
+
         ]
       },
       {
