@@ -6,5 +6,6 @@ export const dashboardRoutes = [{
   children: [
     {path: '', redirectTo: 'patient-table', pathMatch: 'full'},
     {path: 'patient-table', loadChildren: './patient-table/patient-table.module#PatientTableModule'},
+    {path: 'create-demographic', loadChildren: './create-demographic/create-demographic.module#CreateDemographicModule'}
   ],
 }];
