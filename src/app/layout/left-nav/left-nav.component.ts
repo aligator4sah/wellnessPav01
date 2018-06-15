@@ -20,51 +20,47 @@ export class LeftNavComponent implements OnInit {
       },
       {
         label: 'Patient', icon: 'fa fa-fw fa-user',
-        // items: [
-        //   [
-        //     {
-        //       label: 'Demographic',
-        //     },
-        //     {
-        //       label: 'Encounters'
-        //     },
-        //     {
-        //       label: 'Questionnaire'
-        //     },
-        //     {
-        //       label: 'Response'
-        //     }
-        //   ]
-        // ]
+        items: [
+            {
+              label: 'Demographic',
+              url: 'http://www.primefaces.org/primeng'
+            },
+            {
+              label: 'Encounters',
+              routerLink: '/dashBoard'
+            },
+            {
+              label: 'Questionnaire',
+              routerLink: ''
+            },
+            {
+              label: 'Response'
+            }
+        ]
       },
       {
         label: 'Appointments', icon: 'fa fa-fw fa-calendar',
-        // items: [
-        //   [
-        //     {
-        //       label: 'Daily'
-        //     },
-        //     {
-        //       label: 'Departments'
-        //     },
-        //
-        //   ]
-        // ]
+        items: [
+            {
+              label: 'Daily'
+            },
+            {
+              label: 'Departments'
+            },
+        
+        ]
       },
       {
         label: 'Analysis', icon: 'fa fa-fw fa-line-chart',
-        // items: [
-        //   [
-        //     {
-        //       label: 'General',
-        //       routerLink: '',
-        //     },
-        //     {
-        //       label: 'Individual'
-        //     },
-        //
-        //   ]
-        // ]
+        items: [
+            {
+              label: 'General',
+              routerLink: '',
+            },
+            {
+              label: 'Individual'
+            },
+        ]
       }
     ];
   }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LeftNavComponent } from './left-nav.component';
 import {ShareModule} from '../../share/share.module';
 import {MegaMenuModule, SplitButtonModule, ToolbarModule} from 'primeng/primeng';
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {MegaMenuModule, SplitButtonModule, ToolbarModule} from 'primeng/primeng'
     MegaMenuModule,
     ToolbarModule,
     SplitButtonModule,
+    PanelMenuModule
   ],
   declarations: [LeftNavComponent],
   exports: [
@@ -19,6 +21,7 @@ import {MegaMenuModule, SplitButtonModule, ToolbarModule} from 'primeng/primeng'
     MegaMenuModule,
     ToolbarModule,
     SplitButtonModule,
+    PanelMenuModule
   ]
 })
 export class LeftNavModule { }
