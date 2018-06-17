@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { CreateDemographicComponent } from './create-demographic.component';
 import {ShareModule} from '../../../share/share.module';
 import {Router, RouterModule} from '@angular/router';
-import {CalendarModule, DropdownModule, InputTextModule, PanelMenuModule, RadioButton, RadioButtonModule} from 'primeng/primeng';
+import {
+  CalendarModule, CheckboxModule, DropdownModule, InputTextModule, MultiSelectModule, PanelMenuModule, RadioButton,
+  RadioButtonModule
+} from 'primeng/primeng';
 import {PanelModule} from 'primeng/panel';
 
 @NgModule({
@@ -15,6 +18,8 @@ import {PanelModule} from 'primeng/panel';
     CalendarModule,
     RadioButtonModule,
     DropdownModule,
+    CheckboxModule,
+    MultiSelectModule,
     RouterModule.forChild([
       {path: '', component: CreateDemographicComponent}
     ])
@@ -27,6 +32,8 @@ import {PanelModule} from 'primeng/panel';
     CalendarModule,
     InputTextModule,
     DropdownModule,
+    CheckboxModule,
+    MultiSelectModule,
     RadioButtonModule,
     CreateDemographicComponent
   ]

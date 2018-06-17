@@ -28,3 +28,25 @@
 :host >>> .ui-dropdown {
   width: 200px;
 }
+
+:host >>> .ui-chkbox-label {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+:host >>> .ui-multiselect-label-container {
+  width: 100%;
+}
+
+
+:host >>> .ui-multiselect-label {
+  font-size: 14px;
+}
+
+:host >>> .ui-multiselect-panel {
+  width: 100%;
+}
+
+:host >>> .ui-multiselect-item {
+  font-size: 14px;
+}
