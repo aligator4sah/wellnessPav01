@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-create-demographic',
@@ -17,16 +18,47 @@ export class CreateDemographicComponent implements OnInit {
   selectedLivingArrange: string[] = [];
   selectedResident: string[] = [];
 
+ showMarrayStatus: boolean = false;
+ showEmploymentType: boolean = false;
+
   genders = GENDER;
   races = RACE;
   states = STATES;
   livingArranges = LIVING;
   residentCondition = RESIDENT;
+  marryStatus = MARRYSTATUS;
+  employStatus = EMPLOYMENTS;
+  employTypes = EMPLOYSTATUS;
+
+  additionalForm: FormGroup;
 
 
-  constructor() { }
+  constructor(
+    private fb : FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.additionalForm = this.fb.group({
+      married: ['', Validators.required],
+      together:[''],
+      employment: ['', Validators.required],
+      employType: ['']
+    });
+
+    this.additionalForm.controls['married'].valueChanges.subscribe(value => {
+      if (value === "Married") {
+        this.showMarrayStatus = true;
+      } else {
+        this.showMarrayStatus = false;
+      }
+    });
+    this.additionalForm.controls['employment'].valueChanges.subscribe(value => {
+      if (value === "Employed") {
+        this.showEmploymentType = true;
+      } else {
+        this.showEmploymentType = false;
+      }
+    })
 
   }
 
@@ -58,3 +90,25 @@ export const RESIDENT = [
   {label: 'One story(no stairs)', value: 'One story(no stairs)'},
   {label: 'Stairs to home entrance with ramp', value: 'Stairs to home entrance with ramp'}
 ];
+
+
+export const MARRYSTATUS = [
+  {label: 'Martial Status', value: null},
+  {label: 'Married', value: 'Married'},
+  {label: 'Single', value: 'Single'},
+  {label: 'With partner', value: 'With partner'},
+];
+
+
+export const EMPLOYMENTS = [
+  {label: 'Employement Status', value: null},
+  {label: 'Employed', value: 'Employed'},
+  {label: 'Unemployed', value: 'Unemployed'},
+];
+
+
+export const EMPLOYSTATUS = [
+  {label: 'Employment Type', value: null},
+  {label: 'Full time', value: 'Full time'},
+  {label: 'Part time', value: 'Part time'},
+]

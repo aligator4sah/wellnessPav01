@@ -113,9 +113,39 @@
   </p-panel>
 
   <p-panel  header="Additional Information" [toggleable]="true">
+    <form [formGroup]="additionalForm">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-6">
+        <p-dropdown [options]="marryStatus" formControlName="married"></p-dropdown>
+      </div>
+      <div  *ngIf="showMarrayStatus" class="ui-g-12 ui-md-6">
+        <p-radioButton name="groupname" value="Living together" label="Living together" formControlName="together"></p-radioButton>
+        <p-radioButton name="groupname" value="Not Living together" label="Not Living together" formControlName="together"></p-radioButton>
+      </div>
+    </div>
 
-    Body Content
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-6">
+        <p-dropdown [options]="employStatus" formControlName="employment"></p-dropdown>
+      </div>
+      <div *ngIf="showEmploymentType" class="ui-g-12 ui-md-6">
+        <p-dropdown [options]="employTypes" formControlName="employType"></p-dropdown>
+      </div>
+    </div>
 
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-md-2">
+          <h3>Other Comments:</h3>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+        </div>
+      </div>
+    </form>
   </p-panel>
 
+  <div>
+    <button pButton type="button" label="Submit"></button>
+    <button pButton type="button" label="Back" class="ui-button-secondary"></button>
+  </div>
 </div>
