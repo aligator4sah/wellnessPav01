@@ -1,0 +1,12 @@
+
+:host >>> .ui-fieldset {
+  width: 97%;
+  padding-top: 10px;
+}
+
+
+:host >>> .ui-fieldset-legend {
+  font-family: Verdana;
+  font-size: 14px;
+  color: #3c989e;
+}

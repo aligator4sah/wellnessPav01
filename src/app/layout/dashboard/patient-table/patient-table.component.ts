@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../service/user.service';
 import {SelectItem} from 'primeng/api';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-patient-table',
@@ -17,6 +18,7 @@ export class PatientTableComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -39,4 +41,8 @@ export class PatientTableComponent implements OnInit {
     this.selectedColumns = this.cols;
   }
 
+  checkDetail(client: any) {
+    localStorage.setItem('curPatient', JSON.stringify(client));
+    this.router.navigateByUrl('/dashBoard/patient-home/' + client.id);
+  }
 }
