@@ -38,7 +38,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-client let-columns="columns">
-        <tr>
+        <tr routerLink="/dashBoard/patient-home/{{client.id}}">
           <td *ngFor="let col of columns">
             {{client[col.field]}}
           </td>

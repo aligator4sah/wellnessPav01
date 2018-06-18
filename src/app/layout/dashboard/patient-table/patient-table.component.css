@@ -17,3 +17,7 @@ tr, th {
   font-family: Verdana;
   font-size: 12px;
 }
+
+tr:hover td {
+  background-color: #A8E6CF;
+}
