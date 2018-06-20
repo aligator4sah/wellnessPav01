@@ -1,0 +1,45 @@
+<div  class="main-container">
+  <h2 class="page-title">Create Patient Encounter</h2>
+  <p-steps [model]="items" [(activeIndex)]="activeIndex" [readonly]="false"></p-steps>
+
+  <div [ngSwitch]="activeIndex" class="input-section">
+    <ng-container *ngSwitchCase="0">
+      nwekf
+      <div class="button-group">
+        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="1">
+      nfnoifwfw
+
+      <div class="button-group">
+        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="2">
+      nfnoifwfw
+
+      <div class="button-group">
+        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="3">
+      nfnoifwfw
+
+      <div class="button-group">
+        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+

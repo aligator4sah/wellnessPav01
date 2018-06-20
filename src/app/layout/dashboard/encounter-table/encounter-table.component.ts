@@ -17,7 +17,7 @@ export class EncounterTableComponent implements OnInit {
 
   ngOnInit() {
     this.encounters = this.userService.getEncounterTable();
-    console.log(this.encounters);
+    // console.log(this.encounters);
     this.cols = [
       { field: 'id', header: 'Encounter Id' },
       { field: 'date', header: 'Date' },

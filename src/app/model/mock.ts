@@ -189,6 +189,8 @@ export const GENDER = [
     username: 'cejf342',
     firstname: 'Sally',
     midname: '',
-    lastname: 'Jimmy',
+    lastname: 'Hunter',
+    dob: '10/23/1973',
+    gender: 'Female'
   };
 
