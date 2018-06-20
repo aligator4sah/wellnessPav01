@@ -32,7 +32,7 @@
 }
 
 :host >>> .ui-dropdown {
-  width: 200px;
+  width: 600px;
 }
 
 :host >>> .ui-chkbox-label {
