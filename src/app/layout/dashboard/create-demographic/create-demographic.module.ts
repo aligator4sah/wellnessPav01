@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CreateDemographicComponent } from './create-demographic.component';
 import {ShareModule} from '../../../share/share.module';
 import {Router, RouterModule} from '@angular/router';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 import {
   CalendarModule, CheckboxModule, DropdownModule, InputTextareaModule, InputTextModule, MultiSelectModule, PanelMenuModule, RadioButton,
   RadioButtonModule
@@ -23,6 +25,8 @@ import {ButtonModule} from 'primeng/button';
     MultiSelectModule,
     InputTextareaModule,
     ButtonModule,
+    MessagesModule,
+    MessageModule,
     RouterModule.forChild([
       {path: '', component: CreateDemographicComponent}
     ])
@@ -40,7 +44,9 @@ import {ButtonModule} from 'primeng/button';
     MultiSelectModule,
     RadioButtonModule,
     InputTextareaModule,
-    CreateDemographicComponent
+    CreateDemographicComponent,
+    MessagesModule,
+    MessageModule,
   ]
 })
 export class CreateDemographicModule { }
