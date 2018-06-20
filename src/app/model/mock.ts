@@ -3,7 +3,7 @@ export const GENDER = [
     {label: 'Male', value: 'Male'},
     {label: 'Female', value: 'Female'}
   ];
-  
+
   export const RACE = [
     {label:'Race', value: null},
     {label:'Caucasian', value: 'Caucasian'},
@@ -14,35 +14,35 @@ export const GENDER = [
     {label:'White',value:'White'},
     {label:'Other',value:'Other'}
   ];
-  
-  
-  
+
+
+
   export const LIVING = [
     {label: 'Alone', value: 'Alone'},
     {label: 'With Spouse or unrelated partner', value: "With Spouse or unrelated partner"},
   ];
-  
+
   export const RESIDENT = [
     {label: 'One story(no stairs)', value: 'One story(no stairs)'},
     {label: 'Stairs to home entrance with ramp', value: 'Stairs to home entrance with ramp'}
   ];
-  
-  
+
+
   export const MARRYSTATUS = [
     {label: 'Martial Status', value: null},
     {label: 'Married', value: 'Married'},
     {label: 'Single', value: 'Single'},
     {label: 'With partner', value: 'With partner'},
   ];
-  
-  
+
+
   export const EMPLOYMENTS = [
     {label: 'Employement Status', value: null},
     {label: 'Employed', value: 'Employed'},
     {label: 'Unemployed', value: 'Unemployed'},
   ];
-  
-  
+
+
   export const EMPLOYSTATUS = [
     {label: 'Employment Type', value: null},
     {label: 'Full time', value: 'Full time'},
@@ -103,5 +103,21 @@ export const GENDER = [
     {label: 'Wyoming', value: 'Wyoming'},
   ];
 
+  export const CATEGORY = [
+    {label: 'Initial visit', value: 'Initial visit'},
+    {label: 'Follow up visit', value: 'Follow up visit'},
+    {label: 'Preventive checkup', value: 'Preventive checkup'},
+    {label: 'In office consultation', value: 'In office consultation'},
+    {label: 'Review outcomes', value: 'Review outcomes'},
+    {label: 'Telephone calls', value: 'Telephone calls'}
+  ];
 
+
+  export const USER1 = {
+    id: 1,
+    username: 'cejf342',
+    firstname: 'Sally',
+    midname: '',
+    lastname: 'Jimmy',
+  };
 

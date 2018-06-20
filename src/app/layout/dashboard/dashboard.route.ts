@@ -7,6 +7,7 @@ export const dashboardRoutes = [{
     {path: '', redirectTo: 'patient-table', pathMatch: 'full'},
     {path: 'patient-table', loadChildren: './patient-table/patient-table.module#PatientTableModule'},
     {path: 'create-demographic', loadChildren: './create-demographic/create-demographic.module#CreateDemographicModule'},
-    {path: 'patient-home/:id', loadChildren: './patient-home/patient-home.module#PatientHomeModule'}
+    {path: 'patient-home/:id', loadChildren: './patient-home/patient-home.module#PatientHomeModule'},
+    {path: 'patient-demographic', loadChildren: './patient-demographic/patient-demographic.module#PatientDemographicModule'},
   ],
 }];

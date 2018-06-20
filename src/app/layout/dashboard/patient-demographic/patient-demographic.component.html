@@ -1,0 +1,33 @@
+<div  class="main-container">
+  <h2 class="page-title">Patient Home</h2>
+  <div class="patient-infor">
+    <app-patient-info></app-patient-info>
+  </div>
+
+  <div class="patient-sections">
+    <p-accordion>
+      <p-accordionTab header="Basic Information" [selected]="true">
+        <div style="padding-right: 1214px"></div>
+        <div class="ui-g">
+          <div class="ui-g-4">
+            <label>First Name:<span class="info-label"> {{fakeuser.firstname}}</span></label>
+          </div>
+          <div class="ui-g-4">
+            <label>Middle Name: <span class="info-label"> {{fakeuser.midname}}</span></label>
+          </div>
+          <div class="ui-g-4">
+            <label>Last Name: <span class="info-label"> {{fakeuser.lastname}} </span></label>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Address Information">
+
+      </p-accordionTab>
+      <p-accordionTab header="Other Information">
+
+
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <button pButton type="button" (click)="goBack()" label="Back" style="width: 97%; margin-top: 20px; margin-bottom: 10px"></button>
+</div>

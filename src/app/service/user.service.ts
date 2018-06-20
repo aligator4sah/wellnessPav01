@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Client} from '../model/users';
+import {CATEGORY} from '../model/mock';
 
 @Injectable()
 export class UserService {
@@ -14,6 +15,14 @@ export class UserService {
     }
     return clients;
   }
+
+  getEncounterTable() {
+    let encounters = [];
+    for (let i = 0; i < 20; i++) {
+      encounters.push(createNewEncounters(i));
+    }
+    return encounters;
+  }
 }
 
 function createNewClient(id: number) {
@@ -26,6 +35,15 @@ function createNewClient(id: number) {
     gender: GENDER[Math.round(Math.random() * (GENDER.length - 1))],
     lastEncounter: LASTDATE[Math.round(Math.random() * (LASTDATE.length - 1))],
   };
+}
+
+function createNewEncounters(id: number) {
+  return {
+    id: id.toString(),
+    date: LASTDATE[Math.round(Math.random() * (LASTDATE.length - 1))],
+    category: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))],
+    provider: UNAMES[Math.round(Math.random() * (UNAMES.length - 1))],
+  }
 }
 
 /** Mock data used for front end displaying **/

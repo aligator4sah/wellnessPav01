@@ -1,0 +1,40 @@
+.main-container {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 1250px;
+  height: 630px;
+  overflow: auto;
+}
+
+.sub-title {
+  font-family: 'Verdana';
+  font-size: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+
+.patient-sections {
+  padding-top: 20px;
+}
+
+
+.info-label {
+  color: #3c989e;
+}
+
+
+:host >>> .ui-accordion {
+  width: 97%;
+}
+
+
+:host >>> .ui-accordion-header {
+  font-size: 15px;
+}
+
+:host >>> .ui-accordion-content {
+  font-size: 14px;
+}
