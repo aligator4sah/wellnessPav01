@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {GENDER, RACE, STATES, LIVING, RESIDENT, MARRYSTATUS, EMPLOYMENTS, EMPLOYSTATUS} from './../../../model/mock';
+import {GENDER, RACE, STATES, LIVING, RESIDENT, MARRYSTATUS, EMPLOYMENTS, EMPLOYSTATUS, VALIDATION_MESSAGE} from './../../../model/mock';
 @Component({
   selector: 'app-create-demographic',
   templateUrl: './create-demographic.component.html',
@@ -32,6 +32,8 @@ export class CreateDemographicComponent implements OnInit {
 
   createDemographicForm: FormGroup;
 
+  validation_messages = VALIDATION_MESSAGE;
+
 
   constructor(
     private fb : FormBuilder
@@ -44,7 +46,7 @@ export class CreateDemographicComponent implements OnInit {
       lastName: ['', Validators.required],
       birthday: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
-      email: ['', Validators.required, Validators.email],
+      email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
       gender: ['', Validators.required],
       race: ['', Validators.required],
       address1: ['', Validators.required],

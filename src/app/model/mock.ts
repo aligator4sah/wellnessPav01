@@ -20,11 +20,21 @@ export const GENDER = [
   export const LIVING = [
     {label: 'Alone', value: 'Alone'},
     {label: 'With Spouse or unrelated partner', value: "With Spouse or unrelated partner"},
+    {label: 'With children', value: 'With children'},
+    {label: 'With parents or guardian', value: 'With parents or guardian'},
+    {label: 'With relatives other than spouse, children or parents', value: 'With relatives other than spouse, children or parents'},
+    {label: 'With nonrelatives', value: 'With nonrelatives'},
+
   ];
 
   export const RESIDENT = [
     {label: 'One story(no stairs)', value: 'One story(no stairs)'},
-    {label: 'Stairs to home entrance with ramp', value: 'Stairs to home entrance with ramp'}
+    {label: 'Stairs to home entrance with ramp', value: 'Stairs to home entrance with ramp'},
+    {label: 'Stairs to home entrance without ramp', value: 'Stairs to home entrance without ramp'},
+    {label: 'Staris in home with stair lift', value: 'Staris in home with stair lift'},
+    {label: 'Stairs in home without stair lift', value: 'Stairs in home without stair lift'},
+    {label: 'Apartment with elevator', value: 'Apartment with elevator'},
+    {label: 'Apartment without elevator', value: 'Apartment without elevator'},
   ];
 
 
@@ -33,6 +43,9 @@ export const GENDER = [
     {label: 'Married', value: 'Married'},
     {label: 'Single', value: 'Single'},
     {label: 'With partner', value: 'With partner'},
+    {label: 'Widowed', value: 'Widowed'},
+    {label: 'Divorced', value: 'Divorced'},
+    {label: 'Separated', value: 'Separated'},
   ];
 
 
@@ -40,6 +53,9 @@ export const GENDER = [
     {label: 'Employement Status', value: null},
     {label: 'Employed', value: 'Employed'},
     {label: 'Unemployed', value: 'Unemployed'},
+    {label: 'Volunteer', value: 'Volunteer'},
+    {label: 'Retired', value: 'Retired'},
+    {label: 'Unable to work', value: 'Unable to work'},
   ];
 
 
@@ -47,6 +63,9 @@ export const GENDER = [
     {label: 'Employment Type', value: null},
     {label: 'Full time', value: 'Full time'},
     {label: 'Part time', value: 'Part time'},
+    {label: 'Seasonal', value: 'Seasonal'},
+    {label: 'looking for job', value: 'looking for job'},
+    {label: 'Not looking for job', value: 'Not looking for job'},
   ];
 
   export const STATES = [
@@ -111,6 +130,58 @@ export const GENDER = [
     {label: 'Review outcomes', value: 'Review outcomes'},
     {label: 'Telephone calls', value: 'Telephone calls'}
   ];
+
+  export const VALIDATION_MESSAGE = {
+    'firstname': [
+      { type: 'required', message: 'Firstname is required' },
+    ],
+    'lastname': [
+      { type: 'required', message: 'Lastname is required' },
+    ],
+    'birthday': [
+      { type: 'required', message: 'Birthday is required' },
+    ],
+    'email': [
+      { type: 'required', message: 'Email is required' },
+      { type: 'pattern', message: 'Enter a valid email' }
+    ],
+    'gender': [
+      { type: 'required', message: 'Gender is required' },
+    ],
+    'race': [
+      { type: 'required', message: 'Race is required' },
+    ],
+    'address1': [
+      { type: 'required', message: 'Detail adress is required' },
+    ],
+    'city': [
+      { type: 'required', message: 'City is required' },
+    ],
+    'state': [
+      { type: 'required', message: 'State is required' },
+    ],
+    'zipcode': [
+      { type: 'required', message: 'Zipcode is required' },
+      { type: 'pattern', message: 'Enter a valid zipcode' }
+    ],
+    'livingArranges': [
+      { type: 'required', message: 'livingArranges is required' },
+    ],
+    'residentCondition': [
+      { type: 'required', message: 'residentCondition is required' },
+    ],
+    'married': [
+      { type: 'required', message: 'marry status is required' },
+    ],
+    'employment': [
+      { type: 'required', message: 'employment status is required' },
+    ],
+    'phone': [
+      { type: 'required', message: 'phone number is required' },
+      { type: 'pattern', message: 'You must enter 10 digits numbers' },
+    ]
+
+    };
 
 
   export const USER1 = {

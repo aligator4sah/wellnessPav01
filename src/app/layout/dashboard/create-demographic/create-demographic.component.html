@@ -9,6 +9,9 @@
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
             <input type="text" pInputText placeholder="First Name" formControlName="firstName" required>
+            <div *ngFor="let validation of validation_messages.firstname">
+                <p-message severity="error" *ngIf="createDemographicForm.get('firstName').hasError(validation.type) && (createDemographicForm.get('firstName').dirty || createDemographicForm.get('firstName').touched)" text={{validation.message}}></p-message>
+            </div>
           </div>
         </div>
         <div class="ui-g-12 ui-md-4">
@@ -21,6 +24,9 @@
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
             <input type="text" pInputText placeholder="Last Name" formControlName="lastName"required>
+            <div *ngFor="let validation of validation_messages.lastname">
+                <p-message severity="error" *ngIf="createDemographicForm.get('lastName').hasError(validation.type) && (createDemographicForm.get('lastName').dirty || createDemographicForm.get('lastName').touched)" text={{validation.message}}></p-message>
+            </div>
           </div>
         </div>
       </div>
@@ -28,17 +34,26 @@
       <div class="ui-g ui-fluid">
         <div class="ui-g-12 ui-md-4">
           <p-calendar placeholder="Date of Birth" [showIcon]="true" formControlName="birthday"></p-calendar>
+          <div *ngFor="let validation of validation_messages.birthday">
+              <p-message severity="error" *ngIf="createDemographicForm.get('birthday').hasError(validation.type) && (createDemographicForm.get('birthday').dirty || createDemographicForm.get('birthday').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
         <div class="ui-g-12 ui-md-4">
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon"><i class="fa fa-phone"></i></span>
             <input type="tel" pInputText placeholder="Phone" formControlName="phone" required>
+            <div *ngFor="let validation of validation_messages.phone">
+                <p-message severity="error" *ngIf="createDemographicForm.get('phone').hasError(validation.type) && (createDemographicForm.get('phone').dirty || createDemographicForm.get('phone').touched)" text={{validation.message}}></p-message>
+            </div>
           </div>
         </div>
         <div class="ui-g-12 ui-md-4">
           <div class="ui-inputgroup">
             <span class="ui-inputgroup-addon"><i class="fa fa-envelope"></i></span>
             <input type="email" pInputText placeholder="Email" formControlName="email" required>
+            <div *ngFor="let validation of validation_messages.email">
+              <p-message severity="error" *ngIf="createDemographicForm.get('email').hasError(validation.type) && (createDemographicForm.get('email').dirty || createDemographicForm.get('email').touched)" text={{validation.message}}></p-message>
+            </div>
           </div>
         </div>
       </div>
@@ -47,9 +62,15 @@
       <div class="ui-g ui-fluid">
         <div class="ui-g-12 ui-md-6">
           <p-dropdown [options]="genders"  [autoWidth]="false" formControlName="gender"></p-dropdown>
+          <div *ngFor="let validation of validation_messages.gender">
+              <p-message severity="error" *ngIf="createDemographicForm.get('gender').hasError(validation.type) && (createDemographicForm.get('gender').dirty || createDemographicForm.get('gender').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
         <div class="ui-g-12 ui-md-6">
-          <p-dropdown [options]="races"  [autoWidth]="false" formControlName="race"></p-dropdown>
+          <p-dropdown [options]="races"  [autoWidth]="false" formControlName="race" filter="true"s></p-dropdown>
+          <div *ngFor="let validation of validation_messages.race">
+              <p-message severity="error" *ngIf="createDemographicForm.get('race').hasError(validation.type) && (createDemographicForm.get('race').dirty || createDemographicForm.get('race').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
       </div>
 
@@ -63,6 +84,9 @@
         <div class="ui-inputgroup">
           <span class="ui-inputgroup-addon"><i class="fa fa-location-arrow"></i></span>
           <input type="text" pInputText placeholder="Address 1" formControlName="address1" required>
+          <div *ngFor="let validation of validation_messages.address1">
+              <p-message severity="error" *ngIf="createDemographicForm.get('address1').hasError(validation.type) && (createDemographicForm.get('address1').dirty || createDemographicForm.get('address1').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
       </div>
       <div class="ui-g-12 ui-md-6">
@@ -78,16 +102,25 @@
         <div class="ui-inputgroup">
           <!--can be changed to auto complete later -->
           <input type="text" pInputText placeholder="City" formControlName="city" required>
+          <div *ngFor="let validation of validation_messages.city">
+              <p-message severity="error" *ngIf="createDemographicForm.get('city').hasError(validation.type) && (createDemographicForm.get('city').dirty || createDemographicForm.get('city').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
       </div>
       <div class="ui-g-12 ui-md-4">
         <div class="ui-inputgroup">
-          <p-dropdown [options]="states"  formControlName="state"  [style]="{'width':'400px'}" filter="true"></p-dropdown>
+          <p-dropdown [options]="states"  formControlName="state"  [style]="{'width': '100%'}" filter="true"></p-dropdown>
+          <div *ngFor="let validation of validation_messages.state">
+              <p-message severity="error" *ngIf="createDemographicForm.get('state').hasError(validation.type) && (createDemographicForm.get('state').dirty || createDemographicForm.get('state').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
       </div>
       <div class="ui-g-12 ui-md-4">
         <div class="ui-inputgroup">
           <input type="text" pInputText placeholder="Zipcode" formControlName="zipcode" required>
+          <div *ngFor="let validation of validation_messages.zipcode">
+              <p-message severity="error" *ngIf="createDemographicForm.get('zipcode').hasError(validation.type) && (createDemographicForm.get('zipcode').dirty || createDemographicForm.get('zipcode').touched)" text={{validation.message}}></p-message>
+          </div>
         </div>
       </div>
     </div>
@@ -98,6 +131,9 @@
       </div>
       <div class="ui-g-12 ui-md-10">
         <p-checkbox name="groupname" [value]="item.value" [label]="item.label"  *ngFor="let item of livingArranges" formControlName="livingArranges"></p-checkbox>
+        <div *ngFor="let validation of validation_messages.livingArranges">
+            <p-message severity="error" *ngIf="createDemographicForm.get('livingArranges').hasError(validation.type) && (createDemographicForm.get('livingArranges').dirty || createDemographicForm.get('livingArranges').touched)" text={{validation.message}}></p-message>
+        </div>
       </div>
     </div>
 
@@ -106,8 +142,11 @@
         <h3>Resident Condition: </h3>
       </div>
       <div class="ui-g-12 ui-md-10">
-        <p-multiSelect [options]="residentCondition"  [panelStyle]="{minWidth:'12em'}" formControlName="residentCondition"></p-multiSelect>
+        <p-multiSelect [options]="residentCondition"   [(ngModel)]="selectedResident" [panelStyle]="{minWidth:'12em'}" formControlName="residentCondition" ></p-multiSelect>
         <h3>Selected Resident Condition: {{selectedResident}}</h3>
+        <div *ngFor="let validation of validation_messages.residentCondition">
+            <p-message severity="error" *ngIf="createDemographicForm.get('residentCondition').hasError(validation.type) && (createDemographicForm.get('residentCondition').dirty || createDemographicForm.get('residentCondition').touched)" text={{validation.message}}></p-message>
+        </div>
       </div>
     </div>
 
@@ -117,6 +156,9 @@
     <div class="ui-g ui-fluid">
       <div class="ui-g-12 ui-md-6">
         <p-dropdown [options]="marryStatus" formControlName="married" [style]="{'width':'600px'}"></p-dropdown>
+        <div *ngFor="let validation of validation_messages.married">
+            <p-message severity="error" *ngIf="createDemographicForm.get('married').hasError(validation.type) && (createDemographicForm.get('married').dirty || createDemographicForm.get('married').touched)" text={{validation.message}}></p-message>
+        </div>
       </div>
       <div  *ngIf="showMarrayStatus" class="ui-g-12 ui-md-6">
         <p-radioButton name="groupname" value="Living together" label="Living together" formControlName="together"></p-radioButton>
@@ -127,6 +169,9 @@
     <div class="ui-g ui-fluid">
       <div class="ui-g-12 ui-md-6">
         <p-dropdown [options]="employStatus" formControlName="employment" [style]="{'width':'600px'}"></p-dropdown>
+        <div *ngFor="let validation of validation_messages.employment">
+            <p-message severity="error" *ngIf="createDemographicForm.get('employment').hasError(validation.type) && (createDemographicForm.get('employment').dirty || createDemographicForm.get('employment').touched)" text={{validation.message}}></p-message>
+        </div>
       </div>
       <div *ngIf="showEmploymentType" class="ui-g-12 ui-md-6">
         <p-dropdown [options]="employTypes" formControlName="employType"></p-dropdown>

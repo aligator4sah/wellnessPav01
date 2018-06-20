@@ -56,3 +56,8 @@
 :host >>> .ui-multiselect-item {
   font-size: 14px;
 }
+
+:host >>> .ui-message{
+  height: 30px;
+  width: 200px;
+}
