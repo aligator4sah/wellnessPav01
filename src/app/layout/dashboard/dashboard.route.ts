@@ -9,5 +9,6 @@ export const dashboardRoutes = [{
     {path: 'create-demographic', loadChildren: './create-demographic/create-demographic.module#CreateDemographicModule'},
     {path: 'patient-home/:id', loadChildren: './patient-home/patient-home.module#PatientHomeModule'},
     {path: 'patient-demographic', loadChildren: './patient-demographic/patient-demographic.module#PatientDemographicModule'},
+    {path: 'encounter-table', loadChildren: './encounter-table/encounter-table.module#EncounterTableModule'}
   ],
 }];

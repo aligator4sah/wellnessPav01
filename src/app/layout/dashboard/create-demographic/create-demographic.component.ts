@@ -82,5 +82,9 @@ export class CreateDemographicComponent implements OnInit {
   onSubmmit(){
     console.log(this.createDemographicForm.value);
   }
+
+  goBack() {
+    window.history.back();
+  }
 }
 

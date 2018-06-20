@@ -1,0 +1,35 @@
+<div  class="main-container">
+  <h2 class="page-title">Patient Encounter Record</h2>
+  <div class="patient-infor">
+    <app-patient-info></app-patient-info>
+  </div>
+
+  <div class="patient-sections">
+    <p-table #dt [columns]="cols" [value]="encounters" [paginator]="true" [rows]="15" sortMode="multiple">
+      <ng-template pTemplate="caption">
+        <div style="text-align: right">
+          <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+          <input type="text" pInputText size="70" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+            {{col.header}}
+            <p-sortIcon [field]="col.field"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-car let-columns="columns">
+        <tr>
+          <td *ngFor="let col of columns">
+            {{car[col.field]}}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <p-button (onClick)="goBack()" label="Back" style="margin-top: 10px; margin-bottom: 10px"></p-button>
+</div>

@@ -41,7 +41,7 @@ function createNewEncounters(id: number) {
   return {
     id: id.toString(),
     date: LASTDATE[Math.round(Math.random() * (LASTDATE.length - 1))],
-    category: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))],
+    category: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))].label,
     provider: UNAMES[Math.round(Math.random() * (UNAMES.length - 1))],
   }
 }

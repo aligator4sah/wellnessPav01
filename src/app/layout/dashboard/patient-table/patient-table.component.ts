@@ -23,7 +23,7 @@ export class PatientTableComponent implements OnInit {
 
   ngOnInit() {
     this.clients = this.userService.getClientTable();
-    console.log(this.clients);
+    // console.log(this.clients);
     this.cols = [
       { field: 'username', header: 'User Name' },
       { field: 'firstname', header: 'First Name' },
