@@ -58,7 +58,6 @@
         </div>
       </div>
 
-      <!-- TODO: change the dropdown box size to fix the full width-->
       <div class="ui-g ui-fluid">
         <div class="ui-g-12 ui-md-6">
           <p-dropdown [options]="genders"  [autoWidth]="false" formControlName="gender"></p-dropdown>
@@ -67,7 +66,7 @@
           </div>
         </div>
         <div class="ui-g-12 ui-md-6">
-          <p-dropdown [options]="races"  [autoWidth]="false" formControlName="race" filter="true"s></p-dropdown>
+          <p-dropdown [options]="races"  [autoWidth]="false" formControlName="race" filter="true"></p-dropdown>
           <div *ngFor="let validation of validation_messages.race">
               <p-message severity="error" *ngIf="createDemographicForm.get('race').hasError(validation.type) && (createDemographicForm.get('race').dirty || createDemographicForm.get('race').touched)" text={{validation.message}}></p-message>
           </div>
@@ -109,8 +108,8 @@
       </div>
       <div class="ui-g-12 ui-md-4">
         <div class="ui-inputgroup">
-          <p-dropdown [options]="states"  formControlName="state"  [style]="{'width': '100%'}" filter="true"></p-dropdown>
-          <div *ngFor="let validation of validation_messages.state">
+          <p-dropdown [options]="states"  formControlName="state"  [style]="{'width': '380px'}" filter="true"></p-dropdown>
+          <div *ngFor="let validation of validation_messages.state" style="z-index: 1">
               <p-message severity="error" *ngIf="createDemographicForm.get('state').hasError(validation.type) && (createDemographicForm.get('state').dirty || createDemographicForm.get('state').touched)" text={{validation.message}}></p-message>
           </div>
         </div>
@@ -183,7 +182,7 @@
           <h3>Other Comments:</h3>
         </div>
         <div class="ui-g-12 ui-md-6">
-          <textarea [rows]="5" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+          <textarea [rows]="10" [cols]="30" pInputTextarea autoResize="autoResize" style="height: 30px"></textarea>
         </div>
       </div>
   </p-panel>
