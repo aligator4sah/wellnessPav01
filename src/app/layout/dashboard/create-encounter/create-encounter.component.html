@@ -96,7 +96,7 @@
             </div>
             <div class="ui-g-10">
               <div class="ui-inputgroup">
-                <input type="text" size="65" pInputText placeholder="Input valid number" formControlName="height">
+                <input type="number" size="65" pInputText placeholder="Input valid number" formControlName="height">
                 <span class="ui-inputgroup-addon" style="font-size: 14px">cm</span>
               </div>
             </div>
@@ -108,7 +108,7 @@
             </div>
             <div class="ui-g-10">
               <div class="ui-inputgroup">
-                <input type="text" size="65" pInputText placeholder="Input valid number" formControlName="weight">
+                <input type="number" size="65" pInputText placeholder="Input valid number" formControlName="weight">
                 <span class="ui-inputgroup-addon" style="font-size: 14px; padding-right: 8px">lb</span>
               </div>
             </div>
@@ -251,7 +251,7 @@
         <p-footer>
           <div class="button-group">
             <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
-            <p-button (onClick)="submit()" icon="fa fa-check" iconPos="right" label="Confirm()" styleClass="ui-button-info"></p-button>
+            <p-button (onClick)="submit()" icon="fa fa-check" iconPos="right" label="Submit" styleClass="ui-button-info"></p-button>
           </div>
         </p-footer>
       </p-card>

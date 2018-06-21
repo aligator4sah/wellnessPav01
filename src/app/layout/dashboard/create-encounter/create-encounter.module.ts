@@ -6,7 +6,7 @@ import {PatientInfoModule} from '../patient-info/patient-info.module';
 import {StepsModule} from 'primeng/steps';
 import {ButtonModule} from 'primeng/button';
 import {
-  CheckboxModule, DropdownModule, InputSwitchModule, InputTextareaModule, InputTextModule, SplitButtonModule,
+  CheckboxModule, DropdownModule, InputSwitchModule, InputTextareaModule, InputTextModule, KeyFilterModule, SplitButtonModule,
   ToggleButtonModule
 } from 'primeng/primeng';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -26,6 +26,7 @@ import {CardModule} from 'primeng/card';
     ToggleButtonModule,
     ReactiveFormsModule,
     InputSwitchModule,
+    KeyFilterModule,
     DropdownModule,
     RouterModule.forChild([
       {path: '', component: CreateEncounterComponent}
@@ -43,6 +44,7 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     ReactiveFormsModule,
     ToggleButtonModule,
+    KeyFilterModule,
     InputSwitchModule,
     SplitButtonModule,
     DropdownModule,
