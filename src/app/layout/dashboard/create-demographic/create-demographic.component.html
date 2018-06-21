@@ -1,7 +1,7 @@
 <div  class="main-container">
   <h2 class="page-title">Create Demographic</h2>
   <!--client basic information-->
-  <form [formGroup]="createDemographicForm">
+  <form [formGroup]="createDemographicForm" *ngIf="createDemographicForm">
   <p-panel  header="Basic Information" [toggleable]="true">
     <div class="input-form">
       <div class="ui-g ui-fluid">

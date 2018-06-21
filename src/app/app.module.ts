@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import { MenuItem} from 'primeng/api';
 import {UserService} from './service/user.service';
+import {StatusService} from './service/status.service';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {UserService} from './service/user.service';
     NgZorroAntdModule.forRoot()
   ],
   providers: [
-    UserService
+    UserService,
+    StatusService,
   ],
   bootstrap: [AppComponent]
 })

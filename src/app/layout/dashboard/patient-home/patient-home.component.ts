@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {StatusService} from '../../../service/status.service';
 
 @Component({
   selector: 'app-patient-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private statuService: StatusService,
+  ) { }
 
   ngOnInit() {
+  }
+
+  editDemographic() {
+    this.statuService.demoaction$.next('edit');
+    this.router.navigateByUrl('/dashBoard/create-demographic');
   }
 
 }
