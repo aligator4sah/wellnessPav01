@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {USER1} from '../../../model/mock';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {CATEGORY, DISPOSITION, USER1} from '../../../model/mock';
 
 @Component({
   selector: 'app-create-encounter',
@@ -13,7 +13,13 @@ export class CreateEncounterComponent implements OnInit {
   items: MenuItem[];
 
   form1: FormGroup;
+  form2: FormGroup;
+
   fakeUser = USER1;
+  categories = CATEGORY;
+  dispositions = DISPOSITION;
+  icdcode = [];
+  hspcode = [];
   checked: boolean;
 
   activeIndex: number = 0;
@@ -31,7 +37,23 @@ export class CreateEncounterComponent implements OnInit {
       firstname: [this.fakeUser.firstname],
       lastname: [this.fakeUser.lastname],
       gender: [this.checked],
-      dob: [this.fakeUser.dob]
+      dob: [this.fakeUser.dob],
+      confirm: ['', Validators.required]
+    });
+
+    this.form2 = this.fb.group({
+      supervisor: ['', Validators.required],
+      servicestu: [''],
+      height: ['', Validators.required],
+      weight: ['', Validators.required],
+      category: ['', Validators.required],
+      complaint: ['', Validators.required],
+      complaintcode: [''],
+      reason: ['', Validators.required],
+      reasoncode: [''],
+      service: ['', Validators.required],
+      servicecode: [''],
+      disposition: ['', Validators.required]
     });
     this.items = [
       {label: 'Confirm Patient'},

@@ -50,23 +50,132 @@
               <input type="text" size="70" pInputText formControlName="dob" disabled>
             </div>
           </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label"> Confirm</label>
+            </div>
+            <div class="ui-g-10">
+              <p-toggleButton formControlName="confirm" onLabel="I confirm" onIcon="fa fa-check" offLabel="I rejected" offIcon="fa fa-times" [style]="{'width':'150px'}"></p-toggleButton>
+            </div>
+          </div>
         </form>
         <p-footer>
           <div class="button-group">
             <p-button (onClick)="goBack()" icon="fa fa-chevron-left" label="Back" styleClass="ui-button-success"></p-button>
-            <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+            <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info" [disabled]="form1.invalid"></p-button>
           </div>
         </p-footer>
       </p-card>
     </ng-container>
 
     <ng-container *ngSwitchCase="1">
+      <p-card>
+        <form [formGroup]="form2" class="input-form">
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Clinical Supercisor*</label>
+            </div>
+            <div class="ui-g-10">
+              <input type="text" size="70" pInputText formControlName="supervisor" placeholder="Clinician full name">
+            </div>
+          </div>
 
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Service Student</label>
+            </div>
+            <div class="ui-g-10">
+              <input type="text" size="70" pInputText formControlName="servicestu" placeholder="Student full name">
+            </div>
+          </div>
 
-      <div class="button-group">
-        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
-        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
-      </div>
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Height</label>
+            </div>
+            <div class="ui-g-10">
+              <div class="ui-inputgroup">
+                <input type="text" size="65" pInputText placeholder="Input valid number" formControlName="height">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">cm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Weight</label>
+            </div>
+            <div class="ui-g-10">
+              <div class="ui-inputgroup">
+                <input type="text" size="65" pInputText placeholder="Input valid number" formControlName="weight">
+                <span class="ui-inputgroup-addon" style="font-size: 14px; padding-right: 8px">lb</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Category</label>
+            </div>
+            <div class="ui-g-10">
+              <p-dropdown [options]="categories" formControlName="category"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Client's Chief Complaint</label>
+            </div>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="complaint" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-4">
+              <p-dropdown [options]="icdcode" formControlName="complaintcode" placeholder="ICD-10-CM code"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Reason for encounter</label>
+            </div>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="reason" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-4">
+              <p-dropdown [options]="icdcode" formControlName="reasoncode" placeholder="ICD-10-CM code"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Service Provided</label>
+            </div>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="service" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-4">
+              <p-dropdown [options]="icdcode" formControlName="servicecode" placeholder="HCPCS code"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label">Disposition</label>
+            </div>
+            <div class="ui-g-10">
+              <p-dropdown [options]="dispositions" formControlName="disposition" placeholder="Select disposition"></p-dropdown>
+            </div>
+          </div>
+        </form>
+
+        <p-footer>
+          <div class="button-group">
+            <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+            <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+          </div>
+        </p-footer>
+      </p-card>
     </ng-container>
 
     <ng-container *ngSwitchCase="2">

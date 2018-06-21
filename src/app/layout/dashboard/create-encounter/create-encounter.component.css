@@ -35,7 +35,7 @@
 }
 
 .input-label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   /*color: #108ee9;*/
 }
@@ -48,4 +48,25 @@
 
 .button-group {
   padding-left: 20px;
+}
+
+:host >>> .ui-inputswitch {
+  width: 100px;
+  height: 30px;
+}
+
+.ui-inputswitch-on .ui-inputswitch-on-span {
+  font-size: 16px;
+}
+
+.ui-dropdown {
+  width: 100%;
+}
+
+.ui-dropdown-item {
+  font-size: 14px;
+}
+
+.ui-dropdown-label {
+  font-size: 14px;
 }

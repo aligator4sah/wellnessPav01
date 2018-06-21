@@ -183,6 +183,12 @@ export const GENDER = [
 
     };
 
+  export const DISPOSITION = [
+    {label: 'A. No follow up planned', value: 'No follow up planned'},
+    {label: 'B. Follow up planned or scheduled', value: 'Follow up planned or scheduled'},
+    {label: 'C. Referred elsewhere', value: 'Referred elsewhere'}
+  ];
+
 
   export const USER1 = {
     id: 1,
