@@ -70,3 +70,10 @@
 .ui-dropdown-label {
   font-size: 14px;
 }
+
+.output-text {
+  font-size: 14px;
+  padding-left: 10px;
+  color: #434560;
+}
+

@@ -53,10 +53,10 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label"> Confirm</label>
+              <label class="input-label"> Confirm to continue</label>
             </div>
             <div class="ui-g-10">
-              <p-toggleButton formControlName="confirm" onLabel="I confirm" onIcon="fa fa-check" offLabel="I rejected" offIcon="fa fa-times" [style]="{'width':'150px'}"></p-toggleButton>
+              <p-toggleButton formControlName="confirm" onLabel="I confirm the information is true." onIcon="fa fa-check" offLabel="I rejected" offIcon="fa fa-times" [style]="{'width':'300px'}"></p-toggleButton>
             </div>
           </div>
         </form>
@@ -83,7 +83,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Service Student</label>
+              <label class="input-label">Service Student*</label>
             </div>
             <div class="ui-g-10">
               <input type="text" size="70" pInputText formControlName="servicestu" placeholder="Student full name">
@@ -92,7 +92,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Height</label>
+              <label class="input-label">Height*</label>
             </div>
             <div class="ui-g-10">
               <div class="ui-inputgroup">
@@ -104,7 +104,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Weight</label>
+              <label class="input-label">Weight*</label>
             </div>
             <div class="ui-g-10">
               <div class="ui-inputgroup">
@@ -116,7 +116,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Category</label>
+              <label class="input-label">Category*</label>
             </div>
             <div class="ui-g-10">
               <p-dropdown [options]="categories" formControlName="category"></p-dropdown>
@@ -125,7 +125,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Client's Chief Complaint</label>
+              <label class="input-label">Client's Chief Complaint*</label>
             </div>
             <div class="ui-g-6">
               <textarea pInputTextarea formControlName="complaint" style="width: 495px"></textarea>
@@ -137,7 +137,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Reason for encounter</label>
+              <label class="input-label">Reason for encounter*</label>
             </div>
             <div class="ui-g-6">
               <textarea pInputTextarea formControlName="reason" style="width: 495px"></textarea>
@@ -149,7 +149,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Service Provided</label>
+              <label class="input-label">Service Provided*</label>
             </div>
             <div class="ui-g-6">
               <textarea pInputTextarea formControlName="service" style="width: 495px"></textarea>
@@ -161,7 +161,7 @@
 
           <div class="ui-g">
             <div class="ui-g-2">
-              <label class="input-label">Disposition</label>
+              <label class="input-label">Disposition*</label>
             </div>
             <div class="ui-g-10">
               <p-dropdown [options]="dispositions" formControlName="disposition" placeholder="Select disposition"></p-dropdown>
@@ -179,21 +179,82 @@
     </ng-container>
 
     <ng-container *ngSwitchCase="2">
-      nfnoifwfw
+      <p-card>
+        <form [formGroup]="form3" class="input-form">
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label"> Subjective*</label>
+            </div>
+            <div class="ui-g-10">
+              <textarea pInputTextarea formControlName="subjective" style="width: 495px"></textarea>
+            </div>
+          </div>
 
-      <div class="button-group">
-        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
-        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
-      </div>
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label"> Objective*</label>
+            </div>
+            <div class="ui-g-10">
+              <textarea pInputTextarea formControlName="objective" style="width: 495px"></textarea>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label"> Assessment*</label>
+            </div>
+            <div class="ui-g-10">
+              <textarea pInputTextarea formControlName="assessment" style="width: 495px"></textarea>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <label class="input-label"> Plan*</label>
+            </div>
+            <div class="ui-g-10">
+              <textarea pInputTextarea formControlName="plan" style="width: 495px"></textarea>
+            </div>
+          </div>
+        </form>
+        <p-footer>
+          <div class="button-group">
+            <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+            <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
+          </div>
+        </p-footer>
+      </p-card>
     </ng-container>
 
     <ng-container *ngSwitchCase="3">
-      nfnoifwfw
+      <p-card>
+        <!--TODO: output all encounter information and ask for confirmation here -->
+        <div class="input-form">
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <label class="input-label">Clinical Supervisor: <span class="output-text">{{encounter1.supervisor}}</span></label>
+            </div>
+            <div class="ui-g-6">
+              <label class="input-label">Service Student: <span class="output-text">{{encounter1.servicestu}}</span></label>
+            </div>
+          </div>
 
-      <div class="button-group">
-        <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
-        <p-button (onClick)="goNext()" icon="fa fa-chevron-right" iconPos="right" label="Next" styleClass="ui-button-info"></p-button>
-      </div>
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <label class="input-label">Height: <span class="output-text"> {{ encounter1.height }}</span></label>
+            </div>
+            <div class="ui-g-6">
+              <label class="input-label">Weight: <span class="output-text"> {{ encounter1.weight }}</span></label>
+            </div>
+          </div>
+        </div>
+        <p-footer>
+          <div class="button-group">
+            <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+            <p-button (onClick)="submit()" icon="fa fa-check" iconPos="right" label="Confirm()" styleClass="ui-button-info"></p-button>
+          </div>
+        </p-footer>
+      </p-card>
     </ng-container>
   </div>
 </div>

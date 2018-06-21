@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {CATEGORY, DISPOSITION, USER1} from '../../../model/mock';
+import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'app-create-encounter',
@@ -14,14 +15,17 @@ export class CreateEncounterComponent implements OnInit {
 
   form1: FormGroup;
   form2: FormGroup;
+  form3: FormGroup;
+
+  encounter1: any;
+  encounter2: any;
 
   fakeUser = USER1;
   categories = CATEGORY;
   dispositions = DISPOSITION;
   icdcode = [];
-  hspcode = [];
-  checked: boolean;
 
+  checked: boolean;
   activeIndex: number = 0;
 
   constructor(
@@ -55,6 +59,14 @@ export class CreateEncounterComponent implements OnInit {
       servicecode: [''],
       disposition: ['', Validators.required]
     });
+
+    this.form3 = this.fb.group({
+      subjective: ['', [Validators.required, Validators.minLength(5)]],
+      objective: ['', [Validators.required, Validators.minLength(5)]],
+      assessment: ['', [Validators.required, Validators.minLength(5)]],
+      plan: ['', [Validators.required, Validators.minLength(5)]]
+    });
+
     this.items = [
       {label: 'Confirm Patient'},
       {label: 'Input Encounter'},
@@ -79,10 +91,24 @@ export class CreateEncounterComponent implements OnInit {
     } else {
       this.activeIndex = 0;
     }
+
+    //bind the input form value
+    if (this.activeIndex === 2) {
+      this.encounter1 = this.form2.value;
+      console.log(this.encounter1);
+    } else if (this.activeIndex === 3) {
+      this.encounter2 = this.form3.value;
+      console.log(this.encounter2);
+    }
   }
 
   goBack() {
     window.history.back();
+  }
+
+  submit() {
+   console.log(this.encounter1);
+   console.log(this.encounter2);
   }
 
 }
