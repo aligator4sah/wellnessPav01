@@ -24,3 +24,28 @@
   margin-top: 10px;
   margin-left: 10px;
 }
+
+
+.input-form {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  width: 97%;
+  justify-content: center;
+}
+
+.input-label {
+  font-size: 16px;
+  font-weight: bold;
+  /*color: #108ee9;*/
+}
+
+.ui-inputtext {
+  font-size: 14px;
+  color: #000000;
+  background-color: aliceblue;
+}
+
+.button-group {
+  padding-left: 20px;
+}
