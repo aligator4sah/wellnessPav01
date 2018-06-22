@@ -9,6 +9,8 @@ import {MenuItem} from 'primeng/api';
 export class HeadbarComponent implements OnInit {
   items: MenuItem[];
 
+  username = JSON.parse(localStorage.getItem('curUser')).username;
+
   constructor() { }
 
   ngOnInit() {

@@ -4,6 +4,7 @@ import { LeftNavComponent } from './left-nav.component';
 import {ShareModule} from '../../share/share.module';
 import {MegaMenuModule, SplitButtonModule, ToolbarModule} from 'primeng/primeng';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import {UserInfoModule} from './user-info/user-info.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     MegaMenuModule,
     ToolbarModule,
     SplitButtonModule,
-    PanelMenuModule
+    PanelMenuModule,
+    UserInfoModule,
   ],
   declarations: [LeftNavComponent],
   exports: [
@@ -21,7 +23,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     MegaMenuModule,
     ToolbarModule,
     SplitButtonModule,
-    PanelMenuModule
+    PanelMenuModule,
+    UserInfoModule,
   ]
 })
 export class LeftNavModule { }

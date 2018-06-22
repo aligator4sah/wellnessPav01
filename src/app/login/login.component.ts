@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    localStorage.clear();
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -44,15 +45,16 @@ export class LoginComponent implements OnInit {
     });
     setTimeout(_ => {
       this.searchOptions = [
-        { value: 'Admin', label: 'Administrator' },
+        { value: 'Administrator', label: 'Administrator' },
         { value: 'Clinician', label: 'Clinician' },
-        { value: 'FrontDesk', label: 'Front Desk' }
+        { value: 'Front Desk', label: 'Front Desk' }
       ];
     }, 100);
   }
 
   login() {
       console.log(this.loginForm.value);
+      localStorage.setItem('curUser', JSON.stringify(this.loginForm.value));
       this.route.navigateByUrl('dashBoard');
   }
 
