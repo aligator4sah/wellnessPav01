@@ -12,7 +12,7 @@
     </div>
   </p-toolbar>
 
-  <div class="main-menu">
+  <div class="main-menu" *ngIf="items">
     <p-panelMenu [model]="items"></p-panelMenu>
 
   <p-toolbar>
@@ -23,7 +23,7 @@
   </p-toolbar>
   </div>
 
-  <!-- efniwe -->
+  <!-- footer element -->
   <div class="footer">
     <p class="copy-right">{{today | date:'yyyy'}}<span>@CopyRight</span></p>
     <p class="copy-right" style="color: #3c989e">University of Pittsburgh</p>

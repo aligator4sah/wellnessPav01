@@ -30,9 +30,9 @@ export class LoginComponent implements OnInit {
     ) {
     this.roles = [
       {value: null, label: 'Select Role'},
-      { value: 'Admin', label: 'Administrator' },
+      { value: 'Administrator', label: 'Administrator' },
       { value: 'Clinician', label: 'Clinician' },
-      { value: 'FrontDesk', label: 'Front Desk' }
+      { value: 'Front Desk', label: 'Front Desk' }
     ];
   }
 
@@ -43,13 +43,6 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       role: ['', Validators.required]
     });
-    setTimeout(_ => {
-      this.searchOptions = [
-        { value: 'Administrator', label: 'Administrator' },
-        { value: 'Clinician', label: 'Clinician' },
-        { value: 'Front Desk', label: 'Front Desk' }
-      ];
-    }, 100);
   }
 
   login() {

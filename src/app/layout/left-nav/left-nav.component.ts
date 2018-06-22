@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import {Schedule} from 'primeng/primeng';
 
 @Component({
   selector: 'app-left-nav',
@@ -9,6 +10,8 @@ import {MenuItem} from 'primeng/api';
 export class LeftNavComponent implements OnInit {
   items: MenuItem[];
   showSearch: boolean = false;
+
+  user = JSON.parse(localStorage.getItem('curUser'));
   today = Date.now();
 
   constructor() { }
@@ -66,6 +69,20 @@ export class LeftNavComponent implements OnInit {
         ]
       }
     ];
+
+    if (this.user.role.value === 'Clinician') {
+      this.items.push({
+        label: 'Schedule',
+        icon: 'fa fa-fw fa-calendar-check-o',
+        items: []});
+    } else if (this.user.role.value === 'Administrator') {
+      this.items.splice(1, 2);
+      this.items.push({
+        label: 'Event',
+        icon: 'fa fa-fw fa-handshake-o',
+        items: []
+      });
+    }
   }
 
   showSearchBar() {
