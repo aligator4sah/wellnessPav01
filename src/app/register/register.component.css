@@ -1,0 +1,10 @@
+.container {
+  background-image: url("../../assets/login-bk.jpg");
+  height: 100%;
+  weight: 100%;
+  justify-content: center;
+}
+
+
+.register-card {
+}
