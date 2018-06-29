@@ -26,8 +26,36 @@
         <div class="section-desp">User encounter records, including record data belonging to different departments</div>
         <p-footer>
           <button pButton type="button" label="Check" icon="fa fa-check" style="margin-right: .25em" routerLink="/dashBoard/encounter-table"></button>
-          <button pButton type="button" label="Create" icon="fa fa-pencil" class="ui-button-secondary" routerLink="/dashBoard/create-encounter"></button>
+          <button pButton type="button" label="Availability" icon="fa fa-pencil" class="ui-button-secondary" (click)="showDialog()"></button>
         </p-footer>
+
+        <p-dialog header="Check Availability" [(visible)]="display" [width]="500" [height]="300"
+                  [contentStyle]="{'overflow':'visible'}">
+              <div class="ui-g">
+                <div class="ui-g-3">
+                  <label style="font-size: 14px">Department: </label>
+                </div>
+                <div class="ui-g-9">
+                  <p-dropdown [options]="departments" [style]="{'width': '230px'}"></p-dropdown>
+                </div>
+              </div>
+
+              <div class="ui-g">
+                <div class="ui-g-3">
+                  <label style="font-size: 14px">Chief Complaint:</label>
+                </div>
+                <div class="ui-g-9">
+                  <textarea [rows]="5" [cols]="34" pInputTextarea autoResize="autoResize"></textarea>
+                </div>
+              </div>
+
+
+          <p-footer>
+            <button type="button" pButton icon="fa fa-check" (click)="display=false" label="Check"></button>
+            <button type="button" pButton icon="fa fa-close" (click)="display=false" label="Back"></button>
+          </p-footer>
+        </p-dialog>
+
       </p-card>
     </div>
 

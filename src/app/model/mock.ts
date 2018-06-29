@@ -24,7 +24,6 @@ export const GENDER = [
     {label: 'With parents or guardian', value: 'With parents or guardian'},
     {label: 'With relatives other than spouse, children or parents', value: 'With relatives other than spouse, children or parents'},
     {label: 'With nonrelatives', value: 'With nonrelatives'},
-
   ];
 
   export const RESIDENT = [
@@ -199,6 +198,23 @@ export const GENDER = [
     dob: '10/23/1973',
     gender: 'Female'
   };
+
+  export const DEPARTMENT = [
+    {label: 'Athletic Training & Sports Medicine', value: 'Athletic Training & Sports Medicine'},
+    {label: 'Audiology & Speech-Language Pathology', value: 'Audiology & Speech-Language Pathology'},
+    {label: 'Counseling', value: 'Counseling'},
+    {label: 'Emergency Medicine', value: 'Emergency Medicine'},
+    {label: 'Nutrition & Wellness', value: 'Nutrition & Wellness'},
+    {label: 'Occupational Therapy', value: 'Occupational Therapy'},
+    {label: 'Physical Therapy', value: 'Physical Therapy'},
+    {label: 'Physician Assistant Studies', value: 'Physician Assistant Studies'},
+    {label: 'Prosthetics & Orthotics', value: 'Prosthetics & Orthotics'}
+  ];
+
+  export const ROLES = [
+    {label: 'Teacher', value: 'Teacher'},
+    {label: 'Student', value: 'Student'}
+  ];
 
 
 
