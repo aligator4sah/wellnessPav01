@@ -1,0 +1,42 @@
+.main-container {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 1250px;
+  height: 630px;
+  overflow: auto;
+}
+
+.sub-title {
+  font-family: 'Verdana';
+  font-size: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.patient-sections {
+  padding-top: 20px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.card-section {
+  padding-right: 30px;
+}
+
+
+.section-desp {
+  padding-bottom: 20%;
+}
+
+:host >>> .ui-datepicker {
+  width: 350px;
+  height: 350px;
+  font-size: 16px;
+}
+
+
+p-dropdown {
+  font-size: 14px;
+}

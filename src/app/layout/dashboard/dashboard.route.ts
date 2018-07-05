@@ -10,6 +10,7 @@ export const dashboardRoutes = [{
     {path: 'patient-home/:id', loadChildren: './patient-home/patient-home.module#PatientHomeModule'},
     {path: 'patient-demographic', loadChildren: './patient-demographic/patient-demographic.module#PatientDemographicModule'},
     {path: 'encounter-table', loadChildren: './encounter-table/encounter-table.module#EncounterTableModule'},
-    {path: 'create-encounter', loadChildren: './create-encounter/create-encounter.module#CreateEncounterModule'}
+    {path: 'create-encounter', loadChildren: './create-encounter/create-encounter.module#CreateEncounterModule'},
+    {path: 'create-p-appointment', loadChildren: './create-p-appointment/create-p-appointment.module#CreatePAppointmentModule'},
   ],
 }];

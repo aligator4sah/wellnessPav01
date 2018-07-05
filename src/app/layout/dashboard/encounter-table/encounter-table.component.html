@@ -5,7 +5,7 @@
   </div>
 
   <div class="patient-sections">
-    <p-table #dt [columns]="cols" [value]="encounters" [paginator]="true" [rows]="15" sortMode="multiple">
+    <p-table #dt [columns]="cols" [value]="encounters" [paginator]="true" [rows]="11" sortMode="multiple">
       <ng-template pTemplate="caption">
         <div style="text-align: right">
           <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
@@ -30,6 +30,9 @@
       </ng-template>
     </p-table>
   </div>
-
-  <p-button (onClick)="goBack()" label="Back" style="margin-top: 10px; margin-bottom: 10px"></p-button>
+  <div class="ui-g-12" style="margin-top: 10px; margin-bottom: 10px">
+    <button pButton type="button" label="Create"></button>
+    <button pButton type="button" (onClick)="goBack()" label="Back" class="ui-button-success"></button>
+  </div>
+  <br><br>
 </div>

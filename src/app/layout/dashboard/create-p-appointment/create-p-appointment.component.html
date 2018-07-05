@@ -1,0 +1,35 @@
+<div class="main-container">
+  <h2 class="page-title">Make an Appointment</h2>
+  <div class="patient-infor">
+    <app-patient-info></app-patient-info>
+  </div>
+
+  <div class="patient-sections">
+      <div class="ui-g-12">
+        <div class="ui-g-4">
+          <p-calendar [(ngModel)]="date11" [inline]="true" selectionMode="multiple" [style]="{'width': '400px'}"></p-calendar>
+        </div>
+
+        <div class="ui-g-6">
+          <h2> Appointment Information</h2>
+          <div [ngSwitch]="stepper">
+            <ng-container *ngSwitchCase="0">
+              <form [formGroup]="appForm" style="padding-top: 20px; padding-bottom: 10px">
+                <p-dropdown formControl="department" [options]="departments" [style]="{'width': '400px'}"></p-dropdown>
+              </form>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="1">
+              mfpeorf
+            </ng-container>
+
+            <ng-container *ngSwitchCase="2">
+              mfpeorf
+            </ng-container>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
