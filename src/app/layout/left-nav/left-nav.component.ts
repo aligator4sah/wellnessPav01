@@ -29,15 +29,19 @@ export class LeftNavComponent implements OnInit {
         items: [
             {
               label: 'Demographic',
-              url: 'http://www.primefaces.org/primeng'
+              routerLink: '/dashBoard/patient-demographic'
             },
             {
               label: 'Encounters',
-              routerLink: '/dashBoard'
+              routerLink: '/dashBoard/create-encounter'
             },
             {
               label: 'Questionnaire',
               routerLink: ''
+            },
+            {
+              label: 'Appointment',
+              routerLink: '/dashBoard/create-p-appointment'
             },
             {
               label: 'Response'
@@ -74,7 +78,16 @@ export class LeftNavComponent implements OnInit {
       this.items.push({
         label: 'Schedule',
         icon: 'fa fa-fw fa-calendar-check-o',
-        items: []});
+        routerLink: '/dashBoard/clinician-schedule',
+        items: [
+          {
+            label: 'Create'
+          },
+          {
+            label: 'List',
+            routerLink: '/dashBoard/clinician-schedule'
+          }
+        ]});
     } else if (this.user.role.value === 'Administrator') {
       this.items.splice(1, 2);
       this.items.push({

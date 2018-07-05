@@ -59,4 +59,5 @@ p-button {
 :host >>> .ui-button {
   width: 400px;
   margin-bottom: 10px;
+  height: 30px;
 }
