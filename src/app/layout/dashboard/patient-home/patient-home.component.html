@@ -1,4 +1,4 @@
-<div  class="main-container">
+<div class="main-container">
   <h2 class="page-title">Patient Home</h2>
   <div class="patient-infor">
     <app-patient-info></app-patient-info>
@@ -30,30 +30,36 @@
         </p-footer>
 
         <p-dialog header="Check Availability" [(visible)]="display" [width]="500" [height]="300"
-                  [contentStyle]="{'overflow':'visible'}">
+                  [contentStyle]="{'overflow':'visible'}" [responsive]="true" [modal]="true">
               <div class="ui-g">
                 <div class="ui-g-3">
                   <label style="font-size: 14px">Department: </label>
                 </div>
                 <div class="ui-g-9">
-                  <p-dropdown [options]="departments" [style]="{'width': '230px'}"></p-dropdown>
+                  <p-dropdown [options]="departments" [(ngModel)]="selectedDepartment" [style]="{'width': '280px'}"></p-dropdown>
                 </div>
               </div>
 
               <div class="ui-g">
                 <div class="ui-g-3">
-                  <label style="font-size: 14px">Chief Complaint:</label>
+                  <label style="font-size: 14px">Available Till:</label>
                 </div>
                 <div class="ui-g-9">
-                  <textarea [rows]="5" [cols]="34" pInputTextarea autoResize="autoResize"></textarea>
+                  <p-calendar [(ngModel)]="date8" [timeOnly]="true" [inputStyle]="{'width': '280px'}"></p-calendar>
                 </div>
               </div>
+          <br>
+          <button type="button" pButton icon="fa fa-check" (click)="checkAvailability()" label="Check"></button>
+          <button type="button" pButton icon="fa fa-close" (click)="display=false" label="Back" class="ui-button-secondary"></button>
 
-
-          <p-footer>
-            <button type="button" pButton icon="fa fa-check" (click)="display=false" label="Check"></button>
-            <button type="button" pButton icon="fa fa-close" (click)="display=false" label="Back"></button>
-          </p-footer>
+          <div *ngIf="showAvailable" class="info-group">
+            <div *ngIf="available; else appt">
+              <p style="font-size: 16px;">{{instructions}}</p>
+            </div>
+            <ng-template #appt>
+              <p style="font-size: 16px;"> {{instructions}}</p>
+            </ng-template>
+          </div>
         </p-dialog>
 
       </p-card>
@@ -84,6 +90,5 @@
         </p-footer>
       </p-card>
     </div>
-
   </div>
 </div>

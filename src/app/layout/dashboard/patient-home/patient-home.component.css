@@ -33,3 +33,12 @@
 .section-desp {
   padding-bottom: 20%;
 }
+
+p-dropdown {
+  font-size: 14px;
+}
+
+.info-group {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

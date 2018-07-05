@@ -6,7 +6,7 @@ import {RouterModule} from '@angular/router';
 import {CardModule} from 'primeng/card';
 import {PatientInfoModule} from '../patient-info/patient-info.module';
 import {DialogModule} from 'primeng/dialog';
-import {DropdownModule, InputTextareaModule} from 'primeng/primeng';
+import {CalendarModule, DropdownModule, InputTextareaModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
@@ -16,6 +16,7 @@ import {DropdownModule, InputTextareaModule} from 'primeng/primeng';
     DialogModule,
     DropdownModule,
     InputTextareaModule,
+    CalendarModule,
     PatientInfoModule,
     RouterModule.forChild([
       {path: '', component: PatientHomeComponent}
@@ -29,6 +30,7 @@ import {DropdownModule, InputTextareaModule} from 'primeng/primeng';
     CardModule,
     DialogModule,
     DropdownModule,
+    CalendarModule,
     InputTextareaModule,
     PatientHomeComponent,
     RouterModule,
