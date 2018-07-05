@@ -67,11 +67,11 @@ a:hover {
 }
 
 .submit-button {
-  width: 290px;
-  height: 35px;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
+   width: 290px;
+   height: 35px;
+   font-size: 16px;
+   margin-bottom: 10px;
+ }
 
 .basic-container {
   width:700px;

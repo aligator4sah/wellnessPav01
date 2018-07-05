@@ -1,21 +1,75 @@
-.container {
-  background-image: url("../../assets/login-bk.jpg");
-  height: 100%;
-  weight: 100%;
-  justify-content: center;
+.card-section {
+  margin-top: 6%;
 }
 
-
-.form-section {
-  padding-top: 20px;
+.left-side {
+  left: 0px;
+  width: 40%;
+  height: 530px;
+  float: left;
 }
 
-.input-label {
-  font-family: Verdana;
+.right-side {
+  right: 0px;
+  width: 60%;
+  height: 530px;
+  float: left;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #434560;
+}
+
+.login-pic {
+  width: 330px;
+  height: 530px;
+}
+
+.login-form {
+  height: 60%;
+  top: 10px;
+  bottom: 10px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.input-form {
+  width: 400px;
+  left: 10%;
+  right: 10%;
+}
+
+.basic-container {
+  width:700px;
+  height:530px;
+  top: 48%;
+  left: 50%;
+  /*border-radius:15px;*/
+  background: #434560;
+}
+
+input::placeholder {
   font-size: 14px;
 }
 
+p-dropdown {
+  font-size: 14px;
+}
 
-.card-section {
-  margin-top: 6%;
+:host >>> .ui-dropdown-items {
+  z-index: 1;
+}
+
+:host >>> .ui-dropdown-panel {
+  z-index: 1;
+  padding-bottom: 12px;
+}
+
+p-inputMask {
+  font-size: 15px;
 }

@@ -200,6 +200,7 @@ export const GENDER = [
   };
 
   export const DEPARTMENT = [
+    {label: 'Select Department', value: null},
     {label: 'Athletic Training & Sports Medicine', value: 'Athletic Training & Sports Medicine'},
     {label: 'Audiology & Speech-Language Pathology', value: 'Audiology & Speech-Language Pathology'},
     {label: 'Counseling', value: 'Counseling'},
@@ -212,6 +213,7 @@ export const GENDER = [
   ];
 
   export const ROLES = [
+    {label: 'Select Role', value: null},
     {label: 'Teacher', value: 'Teacher'},
     {label: 'Student', value: 'Student'}
   ];

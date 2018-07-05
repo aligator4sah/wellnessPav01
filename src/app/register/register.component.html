@@ -1,77 +1,34 @@
-<div class="container">
-  <div class="ui-g">
-    <div class="ui-g-4"></div>
-    <p-card title="Clinician Register" class="ui-g-4 card-section">
-      <div class="form-section">
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">User Name: </label>
+<div class="login-main">
+  <div class="basic-container mid-position">
+    <div class="left-side">
+      <img src="../../assets/login.jpg" class="login-pic">
+    </div>
+    <div class="right-side">
+      <div class="login-form">
+        <h4 class="subtitle">Sign in as Clinician</h4>
+        <br>
+        <p-scrollPanel [style]="{width: '100%', height: '320px'}">
+          <div style="padding:1em;line-height:1.5; margin-bottom: 10px">
+            <form [formGroup]="registerForm">
+              <input type="text" pInputText placeholder="User Name" formControlName="username" style="width: 300px; margin-bottom: 10px"/>
+              <input type="text" pInputText placeholder="First Name" formControlName="firstname" style="width: 300px; margin-bottom: 10px"/>
+              <input type="text" pInputText placeholder="Last Name" formControlName="lastname" style="width: 300px; margin-bottom: 10px"/>
+              <input type="password" pPassword placeholder="Password" formControlName="password" style="width: 300px; margin-bottom: 10px"/>
+              <input type="password" pPassword placeholder="Confirm Password" formControlName="repassword" style="width: 300px; margin-bottom: 10px"/>
+              <p-inputMask mask="(999) 999-9999" formControlName="phone" placeholder="Phone" size="36"></p-inputMask>
+              <input type="email" pInputText placeholder="Email" formControlName="email" style="width: 300px; margin-bottom: 10px; margin-top: 10px"/>
+              <p-dropdown [options]="departments" formControlName="department" [style]="{'width': '300px', 'margin-bottom': '10px'}"></p-dropdown>
+              <p-dropdown [options]="roles" formControlName="role" [style]="{'width': '300px', 'margin-bottom': '10px'}"></p-dropdown>
+              <div *ngIf="showEnrollYear">
+                <input type="text" pInputText formControlName="year" placeholder="Enroll Year(YYYY)" style="width: 300px; margin-bottom: 10px"/>
+              </div>
+            </form>
           </div>
-          <div class="ui-g-8">
-            <input type="text" size="40" pInputText>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">First Name: </label>
-          </div>
-          <div class="ui-g-8">
-            <input type="text" size="40" pInputText>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">Last Name: </label>
-          </div>
-          <div class="ui-g-8">
-            <input type="text" size="40" pInputText>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">Password: </label>
-          </div>
-          <div class="ui-g-8">
-            <input type="text" size="40" pInputText>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">Confirm Password: </label>
-          </div>
-          <div class="ui-g-8">
-            <input type="text" size="40" pInputText>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">Department: </label>
-          </div>
-          <div class="ui-g-8">
-            <p-dropdown [options]="departments"></p-dropdown>
-          </div>
-        </div>
-
-        <div class="ui-g">
-          <div class="ui-g-3">
-            <label class="input-label">Roles: </label>
-          </div>
-          <div class="ui-g-8">
-            <p-dropdown [options]="roles"></p-dropdown>
-          </div>
-        </div>
+        </p-scrollPanel>
+        <br>
+        <button pButton type="button" class="ui-button-primary submit-button" label="Submit"></button>
+        <button pButton type="button" class="ui-button-success submit-button" label="Back" routerLink="/login"></button>
       </div>
-
-      <p-footer>
-        <button pButton type="button" label="Submit"></button>
-        <button pButton type="button" (click)="back()" label="Back" class="ui-button-success"></button>
-      </p-footer>
-    </p-card>
-    <div class="ui-g-4"></div>
+    </div>
   </div>
 </div>
