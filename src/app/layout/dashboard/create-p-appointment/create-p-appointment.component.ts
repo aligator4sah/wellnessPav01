@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {DEPARTMENT} from '../../../model/mock';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {AVAILABLETIME, DEPARTMENT} from '../../../model/mock';
 
 @Component({
   selector: 'app-create-p-appointment',
@@ -13,6 +13,8 @@ export class CreatePAppointmentComponent implements OnInit {
   stepper: number;
   date11: Date[];
   departments = DEPARTMENT;
+  availableTime = AVAILABLETIME;
+  selectedValue: string;
 
   constructor(
     private fb: FormBuilder
@@ -20,10 +22,22 @@ export class CreatePAppointmentComponent implements OnInit {
 
   ngOnInit() {
     this.appForm = this.fb.group({
-      department: [],
-      complaint: []
+      department: ['', Validators.required],
+      complaint: ['', Validators.required]
     });
     this.stepper = 0;
+  }
+
+  next() {
+    this.stepper++;
+  }
+
+  previous() {
+    this.stepper--;
+  }
+
+  goBack() {
+    window.history.back();
   }
 
 }

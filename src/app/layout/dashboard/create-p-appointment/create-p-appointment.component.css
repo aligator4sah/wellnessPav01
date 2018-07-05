@@ -38,5 +38,25 @@
 
 
 p-dropdown {
-  font-size: 14px;
+  font-size: 16px;
+}
+
+p-radioButton {
+  font-size: 16px;
+}
+
+p-button {
+  margin-left:4px;
+  font-size: 16px;
+  width: 400px;
+}
+
+.dep-label {
+  font-size: 16px;
+  color: #3c989e;
+}
+
+:host >>> .ui-button {
+  width: 400px;
+  margin-bottom: 10px;
 }

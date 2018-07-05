@@ -11,20 +11,57 @@
         </div>
 
         <div class="ui-g-6">
-          <h2> Appointment Information</h2>
           <div [ngSwitch]="stepper">
             <ng-container *ngSwitchCase="0">
+              <h2> Appointment Information</h2>
               <form [formGroup]="appForm" style="padding-top: 20px; padding-bottom: 10px">
-                <p-dropdown formControl="department" [options]="departments" [style]="{'width': '400px'}"></p-dropdown>
+                <div class="ui-g-12">
+                  <p-dropdown formControlName="department" [options]="departments" [style]="{'width': '400px'}"></p-dropdown>
+                </div>
+                <div class="ui-g-12">
+                  <textarea pInputTextarea formControlName="complaint" placeholder="Main Complaint" style="width: 400px; height: 100px; font-size:16px"></textarea>
+                </div>
               </form>
+              <p-button [disabled]="appForm.invalid" label="Check Availability" (onClick)="next()"></p-button>
             </ng-container>
 
             <ng-container *ngSwitchCase="1">
-              mfpeorf
+              <h2>Select a available time</h2>
+              <div style="padding-top: 20px; padding-bottom: 10px">
+                <label class="dep-label">Department: <span> {{appForm.controls['department'].value }}</span></label>
+              </div>
+              <div style="padding-top: 10px; padding-bottom: 20px" *ngFor="let t of availableTime">
+                <p-radioButton name="groupname" [value]="t.time" [label]="t.time" [(ngModel)]="selectedValue"></p-radioButton>
+              </div>
+              <div>
+                <p-button label="Submit" (onClick)="next()"></p-button>
+                <p-button label="Previous" (onClick)="previous()" styleClass="ui-button-success"></p-button>
+              </div>
             </ng-container>
 
             <ng-container *ngSwitchCase="2">
-              mfpeorf
+              <div style="padding-top: 20px; padding-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 20px">Congratulations, you have made an appointment.</label>
+                <div class="ui-g-12">
+                  <div class="ui-g-3" style="font-size: 16px">Department: </div>
+                  <div class="ui-g-8" style="font-size: 16px; color: #3c989e">
+                    {{ appForm.controls['department'].value }}
+                  </div>
+                </div>
+                <div class="ui-g-12">
+                  <div class="ui-g-3" style="font-size: 16px">Time: </div>
+                  <div class="ui-g-8" style="font-size: 16px; color: #3c989e">
+                    {{ selectedValue }}
+                  </div>
+                </div>
+                <div class="ui-g-12">
+                  <div class="ui-g-3" style="font-size: 16px">Chief Complaint:</div>
+                  <div class="ui-g-8" style="font-size: 16px; color: #3c989e">
+                    {{ appForm.controls['complaint'].value }}
+                  </div>
+                </div>
+              </div>
+              <p-button label="Back" (onClick)="goBack()" styleClass="ui-button-success"></p-button>
             </ng-container>
 
           </div>

@@ -219,3 +219,10 @@ export const GENDER = [
   ];
 
 
+  export const AVAILABLETIME = [
+    {time: '13:00 - 15:00, 07/14/2018'},
+    {time: '9:00 - 11:00, 07/18/2018'},
+    {time: '15:00 - 17:00, 07/21/2018'},
+  ];
+
+
