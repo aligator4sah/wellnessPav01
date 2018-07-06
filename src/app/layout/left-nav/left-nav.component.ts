@@ -26,12 +26,7 @@ export class LeftNavComponent implements OnInit {
         label: 'Home',
         icon: 'fa fa-home',
         // routerLink: '/dashBoard/#',
-        items: [
-          {
-            label: 'Encounter',
-            routerLink: '/dashBoard/encounter-view'
-          }
-        ]
+        items: []
       },
       {
         label: 'Patient',

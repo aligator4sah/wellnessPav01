@@ -73,98 +73,123 @@
       <p-card>
         <form [formGroup]="form2" class="input-form">
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Clinical Supercisor*</label>
+            <div class="ui-g-6">
+              <input type="text" size="70" pInputText formControlName="supervisor" placeholder="Supervisor Clinician">
             </div>
-            <div class="ui-g-10">
-              <input type="text" size="70" pInputText formControlName="supervisor" placeholder="Clinician full name">
-            </div>
-          </div>
-
-          <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Service Student*</label>
-            </div>
-            <div class="ui-g-10">
-              <input type="text" size="70" pInputText formControlName="servicestu" placeholder="Student full name">
+            <div class="ui-g-6">
+              <input type="text" size="70" pInputText formControlName="servicestu" placeholder="Service Student">
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Height*</label>
-            </div>
-            <div class="ui-g-10">
+            <div class="ui-g-6">
               <div class="ui-inputgroup">
-                <input type="number" size="65" pInputText placeholder="Input valid number" formControlName="height">
+                <input type="number" pInputText placeholder="Height" formControlName="height" style="width: 475px">
                 <span class="ui-inputgroup-addon" style="font-size: 14px">cm</span>
               </div>
             </div>
-          </div>
 
-          <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Weight*</label>
-            </div>
-            <div class="ui-g-10">
+            <div class="ui-g-6">
               <div class="ui-inputgroup">
-                <input type="number" size="65" pInputText placeholder="Input valid number" formControlName="weight">
+                <input type="number" pInputText placeholder="Weight" formControlName="weight" style="width: 475px">
                 <span class="ui-inputgroup-addon" style="font-size: 14px; padding-right: 8px">lb</span>
               </div>
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Category*</label>
-            </div>
-            <div class="ui-g-10">
-              <p-dropdown [options]="categories" formControlName="category"></p-dropdown>
-            </div>
-          </div>
-
-          <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Client's Chief Complaint*</label>
+            <div class="ui-g-6">
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Systolic Blood Pressure" formControlName="systolic" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">mmHg</span>
+              </div>
             </div>
             <div class="ui-g-6">
-              <textarea pInputTextarea formControlName="complaint" style="width: 495px"></textarea>
-            </div>
-            <div class="ui-g-4">
-              <p-dropdown [options]="icdcode" formControlName="complaintcode" placeholder="ICD-10-CM code"></p-dropdown>
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Diastolic Blood Pressure" formControlName="diastolic" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">mmHg</span>
+              </div>
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Reason for encounter*</label>
+            <div class="ui-g-6">
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Heart Rate" formControlName="heartRate" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">BPM</span>
+              </div>
             </div>
             <div class="ui-g-6">
-              <textarea pInputTextarea formControlName="reason" style="width: 495px"></textarea>
-            </div>
-            <div class="ui-g-4">
-              <p-dropdown [options]="icdcode" formControlName="reasoncode" placeholder="ICD-10-CM code"></p-dropdown>
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Respiratory Rate (optional)" formControlName="respiratoryRate" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">/min</span>
+              </div>
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Service Provided*</label>
+            <div class="ui-g-6">
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Temperature" formControlName="temperature" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">F</span>
+              </div>
             </div>
             <div class="ui-g-6">
-              <textarea pInputTextarea formControlName="service" style="width: 495px"></textarea>
-            </div>
-            <div class="ui-g-4">
-              <p-dropdown [options]="icdcode" formControlName="servicecode" placeholder="HCPCS code"></p-dropdown>
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Oxygen Saturation" formControlName="oxygen" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">%</span>
+              </div>
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label">Disposition*</label>
+            <div class="ui-g-6">
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Waist Circumference" formControlName="waist" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">cm</span>
+              </div>
             </div>
-            <div class="ui-g-10">
-              <p-dropdown [options]="dispositions" formControlName="disposition" placeholder="Select disposition"></p-dropdown>
+            <div class="ui-g-6">
+              <div class="ui-inputgroup">
+                <input type="number" pInputText placeholder="Head Circumference" formControlName="head" style="width: 475px">
+                <span class="ui-inputgroup-addon" style="font-size: 14px">cm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <p-dropdown [options]="categories" formControlName="category" placeholder="Select Category" [style]="{'width': '495px'}"></p-dropdown>
+            </div>
+            <div class="ui-g-6">
+              <p-dropdown [options]="dispositions" formControlName="disposition" placeholder="Select Disposition" [style]="{'width': '495px'}"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="complaint" placeholder="Client's Chief Complaint" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-6">
+              <p-dropdown [options]="icdcode" formControlName="complaintcode" placeholder="ICD-10-CM code for Complaint" [style]="{'width': '495px', 'height': '50px'}"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="reason" placeholder="Reason for Encounter" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-6">
+              <p-dropdown [options]="icdcode" formControlName="reasoncode" placeholder="ICD-10-CM code for Reason" [style]="{'width': '495px', 'height': '50px'}"></p-dropdown>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="service" placeholder="Service Provided" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-6">
+              <p-dropdown [options]="icdcode" formControlName="servicecode" placeholder="HCPCS code" [style]="{'width': '495px', 'height': '50px'}"></p-dropdown>
             </div>
           </div>
         </form>
@@ -182,40 +207,23 @@
       <p-card>
         <form [formGroup]="form3" class="input-form">
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label"> Subjective*</label>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="subjective" placeholder="Subjective" style="width: 495px; height: 80px"></textarea>
             </div>
-            <div class="ui-g-10">
-              <textarea pInputTextarea formControlName="subjective" style="width: 495px"></textarea>
-            </div>
-          </div>
-
-          <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label"> Objective*</label>
-            </div>
-            <div class="ui-g-10">
-              <textarea pInputTextarea formControlName="objective" style="width: 495px"></textarea>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="objective" placeholder="Objective" style="width: 495px; height: 80px"></textarea>
             </div>
           </div>
 
           <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label"> Assessment*</label>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="assessment" placeholder="Assessment" style="width: 495px; height: 80px"></textarea>
             </div>
-            <div class="ui-g-10">
-              <textarea pInputTextarea formControlName="assessment" style="width: 495px"></textarea>
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="plan" placeholder="Plan" style="width: 495px; height: 80px"></textarea>
             </div>
           </div>
 
-          <div class="ui-g">
-            <div class="ui-g-2">
-              <label class="input-label"> Plan*</label>
-            </div>
-            <div class="ui-g-10">
-              <textarea pInputTextarea formControlName="plan" style="width: 495px"></textarea>
-            </div>
-          </div>
         </form>
         <p-footer>
           <div class="button-group">

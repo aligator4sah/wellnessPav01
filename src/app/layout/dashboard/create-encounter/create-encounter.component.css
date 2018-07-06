@@ -2,7 +2,6 @@
   width: 25%;
 }
 
-
 .main-container {
   margin-left: 20px;
   margin-top: 10px;
@@ -47,7 +46,7 @@
 }
 
 .button-group {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 :host >>> .ui-inputswitch {
@@ -75,5 +74,14 @@
   font-size: 14px;
   padding-left: 10px;
   color: #434560;
+}
+
+p-dropdown {
+  width: 495px;
+  font-size: 14px;
+}
+
+.ui-g {
+  padding-bottom: 5px;
 }
 

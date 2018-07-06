@@ -50,6 +50,14 @@ export class CreateEncounterComponent implements OnInit {
       servicestu: [''],
       height: ['', Validators.required],
       weight: ['', Validators.required],
+      systolic: [],
+      diastolic: [],
+      heartRate: [],
+      respiratoryRate: [],
+      temperature: [],
+      oxygen: [],
+      waist: [],
+      head: [],
       category: ['', Validators.required],
       complaint: ['', Validators.required],
       complaintcode: [''],
@@ -69,9 +77,9 @@ export class CreateEncounterComponent implements OnInit {
 
     this.items = [
       {label: 'Confirm Patient'},
-      {label: 'Input Encounter'},
-      {label: 'Input SOAP Note'},
-      {label: 'Confirmation'}
+      {label: 'Vital Information'},
+      {label: 'SOAP Note'},
+      {label: 'Department Detail'}
     ];
   }
 

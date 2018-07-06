@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { EncounterViewComponent } from './encounter-view.component';
 import {RouterModule} from '@angular/router';
 import {DataViewModule} from 'primeng/dataview';
+import {PatientInfoModule} from '../patient-info/patient-info.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DataViewModule,
+    PatientInfoModule,
     RouterModule.forChild([
       {path: '', component: EncounterViewComponent}
     ])
@@ -16,6 +18,7 @@ import {DataViewModule} from 'primeng/dataview';
   exports: [
     CommonModule,
     DataViewModule,
+    PatientInfoModule,
     EncounterViewComponent,
     RouterModule
   ]
