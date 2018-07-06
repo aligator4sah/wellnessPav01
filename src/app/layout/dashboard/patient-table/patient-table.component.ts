@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../../service/user.service';
 import {SelectItem} from 'primeng/api';
 import {Router} from '@angular/router';
+import {StatusService} from '../../../service/status.service';
 
 @Component({
   selector: 'app-patient-table',
@@ -18,11 +19,13 @@ export class PatientTableComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private statusService: StatusService,
     private router: Router,
   ) { }
 
   ngOnInit() {
     this.clients = this.userService.getClientTable();
+    this.statusService.existMember$.next(false);
     // console.log(this.clients);
     this.cols = [
       { field: 'username', header: 'User Name' },
@@ -42,6 +45,7 @@ export class PatientTableComponent implements OnInit {
   }
 
   checkDetail(client: any) {
+    this.statusService.existMember$.next(true);
     localStorage.setItem('curPatient', JSON.stringify(client));
     this.router.navigateByUrl('/dashBoard/patient-home/' + client.id);
   }

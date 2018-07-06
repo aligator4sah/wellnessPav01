@@ -1,4 +1,5 @@
 import {DashboardComponent} from './dashboard.component';
+import {EncounterViewModule} from './encounter-view/encounter-view.module';
 
 export const dashboardRoutes = [{
   path: '',
@@ -12,6 +13,7 @@ export const dashboardRoutes = [{
     {path: 'encounter-table', loadChildren: './encounter-table/encounter-table.module#EncounterTableModule'},
     {path: 'create-encounter', loadChildren: './create-encounter/create-encounter.module#CreateEncounterModule'},
     {path: 'create-p-appointment', loadChildren: './create-p-appointment/create-p-appointment.module#CreatePAppointmentModule'},
-    {path: 'clinician-schedule', loadChildren: './clinician-schedule/clinician-schedule.module#ClinicianScheduleModule'}
+    {path: 'clinician-schedule', loadChildren: './clinician-schedule/clinician-schedule.module#ClinicianScheduleModule'},
+    {path: 'encounter-view', loadChildren: './encounter-view/encounter-view.module#EncounterViewModule'}
   ],
 }];

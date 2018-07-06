@@ -5,6 +5,7 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 export class StatusService {
 
   demoaction$:BehaviorSubject<string> = new BehaviorSubject<string>("create");
+  existMember$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 

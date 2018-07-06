@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     });
     this.registerForm.controls['role'].valueChanges.subscribe(value => {
       this.selectRole = value;
-      console.log(this.selectRole);
+      // console.log(this.selectRole);
       if (this.selectRole === "Student") {
         this.showEnrollYear = true;
       } else {

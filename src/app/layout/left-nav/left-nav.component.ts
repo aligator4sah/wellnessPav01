@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import {Schedule} from 'primeng/primeng';
+import {StatusService} from '../../service/status.service';
 
 @Component({
   selector: 'app-left-nav',
@@ -10,22 +11,32 @@ import {Schedule} from 'primeng/primeng';
 export class LeftNavComponent implements OnInit {
   items: MenuItem[];
   showSearch: boolean = false;
+  showPatient: boolean;
 
   user = JSON.parse(localStorage.getItem('curUser'));
   today = Date.now();
 
-  constructor() { }
+  constructor(
+    private statusService: StatusService
+  ) { }
 
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
         icon: 'fa fa-home',
-        routerLink: '/dashBoard/#',
-        items: []
+        // routerLink: '/dashBoard/#',
+        items: [
+          {
+            label: 'Encounter',
+            routerLink: '/dashBoard/encounter-view'
+          }
+        ]
       },
       {
-        label: 'Patient', icon: 'fa fa-fw fa-user',
+        label: 'Patient',
+        icon: 'fa fa-fw fa-user',
+        routerLink: '/dashBoard/patient-table',
         items: [
             {
               label: 'Demographic',
@@ -73,6 +84,13 @@ export class LeftNavComponent implements OnInit {
         ]
       }
     ];
+
+    /**TODO: hide the patient items when no patient is selected */
+    this.statusService.existMember$.subscribe(value => this.showPatient = value);
+    if (this.showPatient === true) {
+      console.log(this.items.filter(value => value.label === 'Patient'));
+    }
+
 
     if (this.user.role.value === 'Clinician') {
       this.items.push({
