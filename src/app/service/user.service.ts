@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Client} from '../model/users';
 import {CATEGORY} from '../model/mock';
+import {Encounter} from '../model/encounter';
 
 @Injectable()
 export class UserService {
@@ -20,6 +21,14 @@ export class UserService {
     let encounters = [];
     for (let i = 0; i < 20; i++) {
       encounters.push(createNewEncounters(i));
+    }
+    return encounters;
+  }
+
+  getRandomEncounter() {
+    let encounters = [];
+    for (let i = 0; i < 10; i++) {
+      encounters.push(createRandomEncounters(i));
     }
     return encounters;
   }
@@ -47,12 +56,15 @@ function createNewEncounters(id: number) {
 }
 
 function createRandomEncounters(id: number) {
-  return {
-    id: id.toString(),
-    category: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))].label,
+  const encounter = new Encounter({
+    id: id,
+    username: UNAMES[Math.round(Math.random() * (UNAMES.length - 1))],
     height: HEIGHT[Math.round(Math.random() * (HEIGHT.length - 1))],
     weight: WEIGHT[Math.round(Math.random() * (WEIGHT.length - 1))],
-  }
+    date: LASTDATE[Math.round(Math.random() * (LASTDATE.length - 1))],
+    category: CATEGORY[Math.round(Math.random() * (CATEGORY.length - 1))].label,
+  });
+  return encounter;
 }
 
 /** Mock data used for front end displaying **/
@@ -64,5 +76,5 @@ export const UNAMES = ['dsd123', 'dfw233', 'npr234', 'rop193'];
 export const DOB = ['12/23/1993', '04/22/1994', '07/12/1983', '02/23/1974'];
 export const GENDER = ['Female', 'Male'];
 export const LASTDATE= ['12/23/2017', '04/22/2018', '07/12/2017', '02/23/2018'];
-export const HEIGHT = ['167 cm', '152 cm', '176 cm', '158 cm', '184 cm', '193 cm'];
-export const WEIGHT = ['120 lb', '150 lb', '200 lb', '100 lb', '163 lb'];
+export const HEIGHT = [167, 152, 176, 158, 84, 193];
+export const WEIGHT = [120, 150, 200, 100, 163 ];

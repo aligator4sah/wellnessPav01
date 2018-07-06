@@ -4,5 +4,97 @@
     <app-patient-info></app-patient-info>
   </div>
 
+  <div class="patient-sections">
+    <p-dataView #dv [value]="encounters" [paginator]="true" [rows]="20" paginatorPosition="both" filterBy="brand"
+                [sortField]="sortField" [sortOrder]="sortOrder">
+      <p-header>
+        <div class="ui-helper-clearfix">
+          <div class="ui-g">
+            <div class="ui-g-12 ui-md-4">
+              <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By" (onChange)="onSortChange($event)" [autoWidth]="false" [style]="{'min-width':'15em'}"></p-dropdown>
+            </div>
+            <div class="ui-g-6 ui-md-4 filter-container">
+              <div style="position:relative">
+                <input type="search" pInputText placeholder="Search by category" (keyup)="dv.filter($event.target.value)">
+              </div>
+            </div>
+            <div class="ui-g-6 ui-md-4" style="text-align:right">
+              <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+            </div>
+          </div>
+        </div>
+      </p-header>
 
+      <ng-template let-item pTemplate="listItem">
+        <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+          <div class="ui-g-12 ui-md-4 car-details">
+            <div class="ui-g">
+              <div class="ui-g-2 ui-sm-6">Date: </div>
+              <div class="ui-g-10 ui-sm-6"><b>{{item.date}}</b></div>
+
+              <div class="ui-g-2 ui-sm-6">Height: </div>
+              <div class="ui-g-10 ui-sm-6"><b>{{item.height}}</b></div>
+
+              <div class="ui-g-2 ui-sm-6">Weight: </div>
+              <div class="ui-g-10 ui-sm-6"><b>{{item.weight}}</b></div>
+
+              <div class="ui-g-2 ui-sm-6">BMI: </div>
+              <div class="ui-g-10 ui-sm-6"><b>{{item.bmi}}</b></div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-md-6 car-details">
+            <div class="ui-g">
+              <div class="ui-g-3 ui-sm-6">Blood Pressure: </div>
+              <div class="ui-g-9 ui-sm-6"><b>{{item.systolicBloodPressure}}/{{item.diastolicBloodPressure}} mmHg</b></div>
+
+              <div class="ui-g-3 ui-sm-6">Heart Rate: </div>
+              <div class="ui-g-9 ui-sm-6"><b>{{item.heartRate}} /min</b></div>
+
+              <div class="ui-g-3 ui-sm-6">Temperature: </div>
+              <div class="ui-g-9 ui-sm-6"><b>{{item.temperature}} F</b></div>
+
+              <div class="ui-g-3 ui-sm-6">Category: </div>
+              <div class="ui-g-9 ui-sm-6"><b>{{item.category}}</b></div>
+            </div>
+          </div>
+          <div class="ui-g-12 ui-md-1 search-icon">
+            <button pButton type="button" icon="fa fa-search" (click)="selectItem($event, item)"></button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template let-item pTemplate="gridItem">
+        <div style="padding:.5em" class="ui-g-12 ui-md-3">
+          <p-panel [header]="item.id + 1" [style]="{'text-align':'center'}">
+            <div class="card-detail">Height: {{item.height}}</div>
+            <div class="card-detail">Weight: {{item.weight}}</div>
+            <div class="card-detail">BMI index: {{item.bmi}}</div>
+            <div class="car-detail">{{item.date}}</div>
+            <hr class="ui-widget-content" style="border-top:3px">
+            <button pButton type="button" icon="fa fa-search" (click)="selectItem($event, item)" style="margin-top:2px"></button>
+          </p-panel>
+        </div>
+      </ng-template>
+    </p-dataView>
+
+    <p-dialog header="Encounter Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true" width="225" (onAfterHide)="onDialogHide()">
+      <div class="ui-g" *ngIf="selectedItem">
+        <div class="ui-g-4">Subjective: </div>
+        <div class="ui-g-8">{{selectedItem.subjective}}</div>
+
+        <div class="ui-g-4">Objective: </div>
+        <div class="ui-g-8">{{selectedItem.objective}}</div>
+
+        <div class="ui-g-4">Assessment: </div>
+        <div class="ui-g-8">{{selectedItem.assessment}}</div>
+
+        <div class="ui-g-4">Plan: </div>
+        <div class="ui-g-8">{{selectedItem.plan}}</div>
+      </div>
+    </p-dialog>
+
+    <div class="ui-g-12">
+      <button pButton type="button" label="Back" (click)="goBack()"></button>
+    </div>
+  </div>
 </div>
