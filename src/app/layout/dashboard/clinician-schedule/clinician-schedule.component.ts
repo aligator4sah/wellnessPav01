@@ -15,25 +15,25 @@ export class ClinicianScheduleComponent implements OnInit {
     this.events = [
       {
         "title": "All Day Event",
-        "start": "2016-01-01"
+        "start": "2018-07-10"
       },
       {
         "title": "Long Event",
-        "start": "2016-01-07",
-        "end": "2016-01-10"
+        "start": "2018-07-02",
+        "end": "2018-07-05"
       },
       {
         "title": "Repeating Event",
-        "start": "2016-01-09T16:00:00"
+        "start": "2018-07-22T16:00:00"
       },
       {
         "title": "Repeating Event",
-        "start": "2016-01-16T16:00:00"
+        "start": "2018-07-16T16:00:00"
       },
       {
         "title": "Conference",
-        "start": "2016-01-11",
-        "end": "2016-01-13"
+        "start": "2018-07-11",
+        "end": "2018-07-13"
       }
     ];
     this.header = {
@@ -41,6 +41,10 @@ export class ClinicianScheduleComponent implements OnInit {
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     };
+  }
+
+  goBack() {
+    window.history.back();
   }
 
 }
