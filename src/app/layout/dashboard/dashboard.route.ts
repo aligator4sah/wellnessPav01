@@ -14,6 +14,7 @@ export const dashboardRoutes = [{
     {path: 'create-encounter', loadChildren: './create-encounter/create-encounter.module#CreateEncounterModule'},
     {path: 'create-p-appointment', loadChildren: './create-p-appointment/create-p-appointment.module#CreatePAppointmentModule'},
     {path: 'clinician-schedule', loadChildren: './clinician-schedule/clinician-schedule.module#ClinicianScheduleModule'},
-    {path: 'encounter-view', loadChildren: './encounter-view/encounter-view.module#EncounterViewModule'}
+    {path: 'encounter-view', loadChildren: './encounter-view/encounter-view.module#EncounterViewModule'},
+    {path: 'patient-appointment', loadChildren: './patient-appointment/patient-appointment.module#PatientAppointmentModule'},
   ],
 }];

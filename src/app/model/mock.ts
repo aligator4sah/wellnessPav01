@@ -225,4 +225,12 @@ export const GENDER = [
     {time: '15:00 - 17:00, 07/21/2018'},
   ];
 
+  export const APPOINTMENT = [
+    {time: '13:00 - 15:00, 07/14/2018', department: 'AAAAAAA', status: 'upcoming'},
+    {time: '09:00 - 11:00, 07/18/2018', department: 'BBBBBBB', status: 'canceled'},
+    {time: '15:00 - 17:00, 07/21/2018', department: 'CCCCCCC', status: 'missed'},
+    {time: '15:00 - 17:00, 05/08/2018', department: 'DDDDDDD', status: 'missed'},
+    {time: '16:00 - 18:00, 04/09/2018', department: 'EEEEEEE', status: 'missed'},
+  ]
+
 

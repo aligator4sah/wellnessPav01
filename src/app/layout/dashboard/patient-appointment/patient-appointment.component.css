@@ -1,0 +1,15 @@
+.main-container {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 1250px;
+    height: 630px;
+    overflow: auto;
+  }
+
+  .appointment-section{
+    padding-top: 20px;
+  }
+
+  tr, th {
+    font-size: 13px;
+  }
