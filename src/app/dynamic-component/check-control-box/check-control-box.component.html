@@ -1,0 +1,13 @@
+<div class="ui-g" style="width: 250px; margin-bottom: 10px" *ngIf="attrContent; else default">
+  <div class="ui-g-12" *ngFor="let opt of attrContent.optionItems">
+    <p-checkbox name="{{attrContent.name}}" value="{{opt.key}}" label="{{opt.label}}" inputId="{{attrContent.name}} + {{opt.key}}"></p-checkbox>
+  </div>
+</div>
+<ng-template #default>
+  <div class="ui-g" style="width:250px;margin-bottom:10px">
+    <div class="ui-g-12"><p-checkbox name="group1" value="New York" label="New York" inputId="ny"></p-checkbox></div>
+    <div class="ui-g-12"><p-checkbox name="group1" value="San Francisco" label="San Francisco" inputId="sf"></p-checkbox></div>
+    <div class="ui-g-12"><p-checkbox name="group1" value="Los Angeles" label="Los Angeles" inputId="la"></p-checkbox></div>
+  </div>
+</ng-template>
+

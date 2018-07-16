@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {InputBoxModule} from '../dynamic-component/input-box/input-box.module';
 import {DropDownModule} from '../dynamic-component/drop-down/drop-down.module';
 import {RadioControlBoxModule} from '../dynamic-component/radio-control-box/radio-control-box.module';
+import {CheckControlBoxModule} from '../dynamic-component/check-control-box/check-control-box.module';
 
 @NgModule({
   imports: [
@@ -26,6 +27,7 @@ import {RadioControlBoxModule} from '../dynamic-component/radio-control-box/radi
     RadioControlBoxModule,
     InputBoxModule,
     DropDownModule,
+    CheckControlBoxModule,
     AngularFontAwesomeModule
   ],
   declarations: [
@@ -44,6 +46,7 @@ import {RadioControlBoxModule} from '../dynamic-component/radio-control-box/radi
     InputBoxModule,
     OverlayPanelModule,
     RadioControlBoxModule,
+    CheckControlBoxModule,
     DropDownModule,
     AngularFontAwesomeModule
   ]
