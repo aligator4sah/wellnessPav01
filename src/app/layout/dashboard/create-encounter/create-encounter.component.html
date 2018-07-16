@@ -200,6 +200,13 @@
         <!--TODO: output all encounter information and ask for confirmation here -->
         <div class="input-form">
           <div class="ui-g">
+            <app-input-box [attrContent]="inputContent" class="ui-g-6"></app-input-box>
+            <app-drop-down [attrContent]="dropDownContent" class="ui-g-6"></app-drop-down>
+          </div>
+          <div class="ui-g">
+            <app-radio-control-box class="ui-g-12"></app-radio-control-box>
+          </div>
+          <div class="ui-g">
             <div class="ui-g-6">
               <label class="input-label">Clinical Supervisor: <span class="output-text"></span></label>
             </div>

@@ -64,5 +64,26 @@ export class Encounter {
     this.plan = options.plan || '';
     this.date = options.date || '';
   }
+}
 
+
+export class InputAttributes {
+  name: string;
+  type: string;
+  optionNum: number;
+  optionItems: any;
+  placeholder: string;
+  constructor(options: {
+    name?: string;
+    type?: string;
+    optionNum?: number;
+    optionItems?: any;
+    placeholder?: string;
+  } = {}) {
+    this.name = options.name;
+    this.type = options.type;
+    this.optionNum = options.optionNum || 0;
+    this.optionItems = options.optionItems || {};
+    this.placeholder = options.placeholder || '';
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {InputAttributes} from '../../model/encounter';
 
 @Component({
   selector: 'app-drop-down',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drop-down.component.css']
 })
 export class DropDownComponent implements OnInit {
+  @Input() attrContent: InputAttributes;
 
   constructor() { }
 

@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {InputAttributes} from '../../model/encounter';
 
 @Component({
-  selector: 'app-input-box',
-  templateUrl: './input-box.component.html',
-  styleUrls: ['./input-box.component.css']
+  selector: 'app-radio-control-box',
+  templateUrl: './radio-control-box.component.html',
+  styleUrls: ['./radio-control-box.component.css']
 })
-export class InputBoxComponent implements OnInit {
+export class RadioControlBoxComponent implements OnInit {
 
   @Input() attrContent: InputAttributes;
 

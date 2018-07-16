@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {AccordionModule, CalendarModule, DropdownModule, InputTextModule, OverlayPanelModule} from 'primeng/primeng';
-import {AngularFontAwesomeComponent, AngularFontAwesomeModule} from 'angular-font-awesome';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {InputBoxModule} from '../dynamic-component/input-box/input-box.module';
+import {DropDownModule} from '../dynamic-component/drop-down/drop-down.module';
+import {RadioControlBoxModule} from '../dynamic-component/radio-control-box/radio-control-box.module';
 
 @NgModule({
   imports: [
@@ -21,6 +23,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ButtonModule,
     OverlayPanelModule,
     MenuModule,
+    RadioControlBoxModule,
+    InputBoxModule,
+    DropDownModule,
     AngularFontAwesomeModule
   ],
   declarations: [
@@ -36,7 +41,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DropdownModule,
     ButtonModule,
     MenuModule,
+    InputBoxModule,
     OverlayPanelModule,
+    RadioControlBoxModule,
+    DropDownModule,
     AngularFontAwesomeModule
   ]
 })

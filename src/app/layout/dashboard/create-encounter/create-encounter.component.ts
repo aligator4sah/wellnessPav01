@@ -3,6 +3,7 @@ import {MenuItem} from 'primeng/api';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {CATEGORY, DISPOSITION, USER1} from '../../../model/mock';
 import 'rxjs/add/operator/debounceTime';
+import {InputAttributes} from '../../../model/encounter';
 
 @Component({
   selector: 'app-create-encounter',
@@ -12,6 +13,33 @@ import 'rxjs/add/operator/debounceTime';
 export class CreateEncounterComponent implements OnInit {
 
   items: MenuItem[];
+
+  inputContent: InputAttributes = new InputAttributes({
+    name: 'content1',
+    type: 'text',
+    placeholder: 'input the text you want here'
+  });
+
+  dropDownContent: InputAttributes = new InputAttributes({
+    name: 'content2',
+    type: 'dropdown',
+    placeholder: 'select a type',
+    optionItems : [
+      {label: 'aaaaa', key: '1'},
+      {label: 'bbbb', key: '2'},
+      {label: 'cccc', key: '3'}
+    ],
+  });
+
+  radioContent: InputAttributes = new InputAttributes({
+    name: 'content3',
+    type: 'radiobutton',
+    optionItems: [
+      {label: 'aaaa', key: '1'},
+      {label: 'bbb', key: '2'},
+      {label: 'ddd', key: '3'}
+    ]
+  });
 
   form1: FormGroup;
   form2: FormGroup;

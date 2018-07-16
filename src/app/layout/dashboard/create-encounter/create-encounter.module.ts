@@ -11,6 +11,7 @@ import {
 } from 'primeng/primeng';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CardModule} from 'primeng/card';
+import {ShareModule} from '../../../share/share.module';
 
 @NgModule({
   imports: [
@@ -28,6 +29,7 @@ import {CardModule} from 'primeng/card';
     InputSwitchModule,
     KeyFilterModule,
     DropdownModule,
+    ShareModule,
     RouterModule.forChild([
       {path: '', component: CreateEncounterComponent}
     ])
@@ -48,6 +50,7 @@ import {CardModule} from 'primeng/card';
     InputSwitchModule,
     SplitButtonModule,
     DropdownModule,
+    ShareModule,
     CreateEncounterComponent
   ]
 })

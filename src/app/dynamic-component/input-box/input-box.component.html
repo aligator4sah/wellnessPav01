@@ -1,3 +1,4 @@
-<p>
-  input-box works!
-</p>
+<div class="ui-g-12" *ngIf="attrContent">
+  <input type="{{attrContent.type}}" placeholder="{{attrContent.placeholder}}" pInputText style="width: 90%"/>
+</div>
+
