@@ -6,6 +6,9 @@ import { RadioButtonComponent } from './radio-button.component';
   imports: [
     CommonModule
   ],
-  declarations: [RadioButtonComponent]
+  declarations: [RadioButtonComponent],
+  exports: [
+    RadioButtonComponent,
+  ]
 })
 export class RadioButtonModule { }

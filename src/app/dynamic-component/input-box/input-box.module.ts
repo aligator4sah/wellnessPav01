@@ -6,6 +6,9 @@ import { InputBoxComponent } from './input-box.component';
   imports: [
     CommonModule
   ],
-  declarations: [InputBoxComponent]
+  declarations: [InputBoxComponent],
+  exports: [
+    InputBoxComponent
+  ]
 })
 export class InputBoxModule { }

@@ -184,14 +184,6 @@
             </div>
           </div>
 
-          <div class="ui-g">
-            <div class="ui-g-6">
-              <textarea pInputTextarea formControlName="service" placeholder="Service Provided" style="width: 495px"></textarea>
-            </div>
-            <div class="ui-g-6">
-              <p-dropdown [options]="icdcode" formControlName="servicecode" placeholder="HCPCS code" [style]="{'width': '495px', 'height': '50px'}"></p-dropdown>
-            </div>
-          </div>
         </form>
 
         <p-footer>
@@ -204,6 +196,37 @@
     </ng-container>
 
     <ng-container *ngSwitchCase="2">
+      <p-card>
+        <!--TODO: output all encounter information and ask for confirmation here -->
+        <div class="input-form">
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <label class="input-label">Clinical Supervisor: <span class="output-text"></span></label>
+            </div>
+            <div class="ui-g-6">
+              <label class="input-label">Service Student: <span class="output-text"></span></label>
+            </div>
+          </div>
+
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <label class="input-label">Height: <span class="output-text"></span></label>
+            </div>
+            <div class="ui-g-6">
+              <label class="input-label">Weight: <span class="output-text"></span></label>
+            </div>
+          </div>
+        </div>
+        <p-footer>
+          <div class="button-group">
+            <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
+            <p-button (onClick)="submit()" icon="fa fa-check" iconPos="right" label="Submit" styleClass="ui-button-info"></p-button>
+          </div>
+        </p-footer>
+      </p-card>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="3">
       <p-card>
         <form [formGroup]="form3" class="input-form">
           <div class="ui-g">
@@ -224,6 +247,15 @@
             </div>
           </div>
 
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <textarea pInputTextarea formControlName="service" placeholder="Service Provided" style="width: 495px"></textarea>
+            </div>
+            <div class="ui-g-6">
+              <p-dropdown [options]="icdcode" formControlName="servicecode" placeholder="HCPCS code" [style]="{'width': '495px', 'height': '50px'}"></p-dropdown>
+            </div>
+          </div>
+
         </form>
         <p-footer>
           <div class="button-group">
@@ -234,36 +266,7 @@
       </p-card>
     </ng-container>
 
-    <ng-container *ngSwitchCase="3">
-      <p-card>
-        <!--TODO: output all encounter information and ask for confirmation here -->
-        <div class="input-form">
-          <div class="ui-g">
-            <div class="ui-g-6">
-              <label class="input-label">Clinical Supervisor: <span class="output-text">{{encounter1.supervisor}}</span></label>
-            </div>
-            <div class="ui-g-6">
-              <label class="input-label">Service Student: <span class="output-text">{{encounter1.servicestu}}</span></label>
-            </div>
-          </div>
 
-          <div class="ui-g">
-            <div class="ui-g-6">
-              <label class="input-label">Height: <span class="output-text"> {{ encounter1.height }}</span></label>
-            </div>
-            <div class="ui-g-6">
-              <label class="input-label">Weight: <span class="output-text"> {{ encounter1.weight }}</span></label>
-            </div>
-          </div>
-        </div>
-        <p-footer>
-          <div class="button-group">
-            <p-button (onClick)="goPrevious()" icon="fa fa-chevron-left" label="Previous" styleClass="ui-button-success"></p-button>
-            <p-button (onClick)="submit()" icon="fa fa-check" iconPos="right" label="Submit" styleClass="ui-button-info"></p-button>
-          </div>
-        </p-footer>
-      </p-card>
-    </ng-container>
   </div>
 </div>
 

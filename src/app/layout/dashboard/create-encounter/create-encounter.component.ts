@@ -63,8 +63,6 @@ export class CreateEncounterComponent implements OnInit {
       complaintcode: [''],
       reason: ['', Validators.required],
       reasoncode: [''],
-      service: ['', Validators.required],
-      servicecode: [''],
       disposition: ['', Validators.required]
     });
 
@@ -72,14 +70,16 @@ export class CreateEncounterComponent implements OnInit {
       subjective: ['', [Validators.required, Validators.minLength(5)]],
       objective: ['', [Validators.required, Validators.minLength(5)]],
       assessment: ['', [Validators.required, Validators.minLength(5)]],
-      plan: ['', [Validators.required, Validators.minLength(5)]]
+      plan: ['', [Validators.required, Validators.minLength(5)]],
+      service: ['', Validators.required],
+      servicecode: [''],
     });
 
     this.items = [
       {label: 'Confirm Patient'},
       {label: 'Vital Information'},
-      {label: 'SOAP Note'},
-      {label: 'Department Detail'}
+      {label: 'Department Detail'},
+      {label: 'SOAP Note'}
     ];
   }
 
