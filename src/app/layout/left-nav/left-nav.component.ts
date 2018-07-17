@@ -94,11 +94,15 @@ export class LeftNavComponent implements OnInit {
         routerLink: '/dashBoard/clinician-schedule',
         items: [
           {
-            label: 'Create'
+            label: 'Schedule'
           },
           {
             label: 'List',
             routerLink: '/dashBoard/clinician-schedule'
+          },
+          {
+            label: 'Create',
+            routerLink: '/dashBoard/create-c-appointment'
           }
         ]});
     } else if (this.user.role.value === 'Administrator') {
