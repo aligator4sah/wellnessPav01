@@ -1,3 +1,38 @@
-<p>
-  create-c-appointment works!
-</p>
+<div  class="main-container">
+  <h2 class="page-title">Schedule New Appointment</h2>
+  <div class="appointment-info">
+    <div class="left-info">
+      <div class="form-group">
+        <div class="ui-g" style="margin-bottom: 20px">
+          <input type="text" pInputText placeholder="Add a title for the event" class="ui-g-12"/>
+        </div>
+        <div class="ui-g" style="margin-bottom: 30px">
+          <input type="text" pInputText placeholder="Add a location" class="ui-g-12"/>
+        </div>
+
+        <div>
+          <p class="hint">Start</p>
+          <div class="ui-g">
+            <div class="ui-g-5" style="margin-right: 10px">
+              <p-calendar [showIcon]="true" class="ui-g-12" placeholder="Date"></p-calendar>
+            </div>
+            <div class="ui-g-4" style="margin-right: 10px">
+              <p-calendar [timeOnly]="true" class="ui-g-12" placeholder="Time"></p-calendar>
+            </div>
+            <div class="ui-g-2">
+              <p-checkbox name="groupname" value="val1" label="All day"></p-checkbox>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div class="right-info">
+
+    </div>
+
+  </div>
+</div>

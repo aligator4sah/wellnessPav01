@@ -1,0 +1,40 @@
+.appointment-info {
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-info {
+  width: 65%;
+}
+
+.right-info {
+  width: 30%;
+}
+
+input {
+  font-size: 15px;
+}
+
+.hint {
+  font-size: 13px;
+}
+
+:host >>> .ui-calendar {
+  width: 100%;
+}
+
+.ui-calendar.ui-calendar-w-btn input {
+  width: 100%;
+}
+
+:host >>> .ui-inputtext {
+  width: 100%;
+  font-size: 15px;
+}
+
+p-checkbox {
+  font-size: 15px;
+}
