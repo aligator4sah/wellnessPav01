@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CreateCAppointmentComponent } from './create-c-appointment.component';
 import {RouterModule} from '@angular/router';
 import {ShareModule} from '../../../share/share.module';
-import {CalendarModule, CheckboxModule, InputTextModule} from 'primeng/primeng';
+import {CalendarModule, CheckboxModule, DropdownModule, InputTextModule, ScheduleModule} from 'primeng/primeng';
+import {EditorModule} from 'primeng/editor';
 
 @NgModule({
   imports: [
@@ -12,6 +13,9 @@ import {CalendarModule, CheckboxModule, InputTextModule} from 'primeng/primeng';
     InputTextModule,
     CalendarModule,
     CheckboxModule,
+    DropdownModule,
+    EditorModule,
+    ScheduleModule,
     RouterModule.forChild([
       {path: '', component: CreateCAppointmentComponent}
     ])
@@ -23,7 +27,10 @@ import {CalendarModule, CheckboxModule, InputTextModule} from 'primeng/primeng';
     CalendarModule,
     CheckboxModule,
     RouterModule,
+    DropdownModule,
+    ScheduleModule,
     ShareModule,
+    EditorModule,
     CreateCAppointmentComponent,
   ]
 })

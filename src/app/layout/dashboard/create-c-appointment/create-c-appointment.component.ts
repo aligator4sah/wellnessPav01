@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCAppointmentComponent implements OnInit {
 
+  frequency: any[];
+  reminder: any[];
+  priority: any[];
+  events: any[];
+  text1: string = 'Add additional note if needed';
+
   constructor() { }
 
   ngOnInit() {

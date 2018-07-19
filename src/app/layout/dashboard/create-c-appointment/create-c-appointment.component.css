@@ -3,7 +3,8 @@
   padding-top: 20px;
   margin-bottom: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .left-info {
@@ -20,6 +21,7 @@ input {
 
 .hint {
   font-size: 13px;
+  padding-left: 10px;
 }
 
 :host >>> .ui-calendar {
@@ -37,4 +39,26 @@ input {
 
 p-checkbox {
   font-size: 15px;
+}
+
+p-dropdown {
+  font-size: 15px;
+  width: 100%;
+}
+
+p-schedule {
+  height: 400px;
+}
+
+.inline-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.repeat-option {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-right: 10px;
 }

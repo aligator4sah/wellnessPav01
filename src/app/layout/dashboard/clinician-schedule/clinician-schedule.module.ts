@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ClinicianScheduleComponent } from './clinician-schedule.component';
 import {RouterModule} from '@angular/router';
-import {ScheduleModule} from 'primeng/primeng';
+import {ScheduleModule} from 'primeng/schedule';
 import {ButtonModule} from 'primeng/button';
 
 @NgModule({
