@@ -6,6 +6,18 @@
 
   <div class="patient-sections">
     <p-dataView [value]="data" [paginator]="true" [rows]="20" paginatorPosition="both">
+      <p-header>
+        <div class="ui-helper-clearfix">
+          <div class="ui-g">
+            <div class="ui-g-6">
+              <p-dropdown placeholder="Search by S/O/A/P/All" [style]="{'width': '80%'}"></p-dropdown>
+            </div>
+            <div class="ui-g-6">
+              <input type="search" pInputText placeholder="Input Keyword" style="width: 80%">
+            </div>
+          </div>
+        </div>
+      </p-header>
       <ng-template let-item pTemplate="listItem">
         <p style="padding-left: 10px; padding-right: 10px; color: #3c989e">Date: {{item.date}}</p>
         <div class="layer-container">

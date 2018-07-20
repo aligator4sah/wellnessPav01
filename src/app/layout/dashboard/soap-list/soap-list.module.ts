@@ -4,14 +4,17 @@ import { SoapListComponent } from './soap-list.component';
 import {RouterModule} from '@angular/router';
 import {DataViewModule} from 'primeng/dataview';
 import {PatientInfoModule} from '../patient-info/patient-info.module';
-import {ScrollPanelModule} from 'primeng/primeng';
+import {InputTextModule, ScrollPanelModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/button';
+import {DropDownModule} from '../../../dynamic-component/drop-down/drop-down.module';
 
 @NgModule({
   imports: [
     CommonModule,
     DataViewModule,
     ButtonModule,
+    DropDownModule,
+    InputTextModule,
     PatientInfoModule,
     ScrollPanelModule,
     RouterModule.forChild([
@@ -23,6 +26,8 @@ import {ButtonModule} from 'primeng/button';
     CommonModule,
     DataViewModule,
     PatientInfoModule,
+    DropDownModule,
+    InputTextModule,
     ButtonModule,
     SoapListComponent,
     ScrollPanelModule,
