@@ -1,3 +1,58 @@
-<p>
-  soap-list works!
-</p>
+<div  class="main-container">
+  <h2 class="page-title">Patient SOAP Overview</h2>
+  <div class="patient-infor">
+    <app-patient-info></app-patient-info>
+  </div>
+
+  <div class="patient-sections">
+    <p-dataView [value]="data" [paginator]="true" [rows]="20" paginatorPosition="both">
+      <ng-template let-item pTemplate="listItem">
+        <p style="padding-left: 10px; padding-right: 10px; color: #3c989e">Date: {{item.date}}</p>
+        <div class="layer-container">
+          <!-- subjective -->
+          <div class="layer-element">
+            <p style="color: #434560">Subjective</p>
+            <p-scrollPanel [style]="{'height': '150px', 'border-right': '4px solid #434560'}">
+              <div style="padding:1em;line-height:1.5">
+                {{item.subjective}}
+              </div>
+            </p-scrollPanel>
+          </div>
+
+          <!-- objective -->
+          <div class="layer-element">
+            <p style="color: #434560">Objective</p>
+            <p-scrollPanel [style]="{'height': '150px', 'border-right': '4px solid #434560'}">
+              <div style="padding:1em;line-height:1.5">
+                {{item.objective}}
+              </div>
+            </p-scrollPanel>
+          </div>
+
+          <!--assessment -->
+          <div class="layer-element">
+            <p style="color: #434560">Assessment</p>
+            <p-scrollPanel [style]="{'height': '150px', 'border-right': '4px solid #434560'}">
+              <div style="padding:1em;line-height:1.5">
+                {{item.assessment}}
+              </div>
+            </p-scrollPanel>
+          </div>
+
+          <!-- plan -->
+          <div class="layer-element">
+            <p style="color: #434560">Plan</p>
+            <p-scrollPanel [style]="{'height': '150px', 'border-right': '4px solid #434560'}">
+              <div style="padding:1em;line-height:1.5">
+                {{item.plan}}
+              </div>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
+  </div>
+  <div class="ui-g-12">
+    <button pButton type="button" label="Back" (click)="goBack()"></button>
+  </div>
+</div>

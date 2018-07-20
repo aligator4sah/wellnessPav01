@@ -1,0 +1,26 @@
+.patient-sections {
+  padding-top: 20px;
+  width: 96%;
+}
+
+p-dataView {
+  font-size: 14px;
+}
+
+.layer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.layer-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+}

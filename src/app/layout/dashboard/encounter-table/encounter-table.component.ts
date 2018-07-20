@@ -49,7 +49,6 @@ export class EncounterTableComponent implements OnInit {
     this.router.navigateByUrl('/dashBoard/encounter-view');
   }
 
-
   goSOAP() {
     this.router.navigateByUrl('/dashBoard/soap-list');
   }
