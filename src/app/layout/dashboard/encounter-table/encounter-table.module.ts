@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import {PatientInfoModule} from '../patient-info/patient-info.module';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
+import {SplitButtonModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import {ButtonModule} from 'primeng/button';
     PatientInfoModule,
     TableModule,
     ButtonModule,
+    SplitButtonModule,
     RouterModule.forChild([
       {path: '', component: EncounterTableComponent}
     ])
@@ -23,6 +25,7 @@ import {ButtonModule} from 'primeng/button';
     RouterModule,
     TableModule,
     ButtonModule,
+    SplitButtonModule,
     EncounterTableComponent,
   ]
 })

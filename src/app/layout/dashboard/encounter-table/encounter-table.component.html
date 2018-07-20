@@ -33,7 +33,7 @@
   <div class="ui-g-12" style="margin-top: 10px; margin-bottom: 10px">
     <button pButton type="button" label="Create" routerLink="/dashBoard/create-encounter"></button>
     <button pButton type="button" (onClick)="goBack()" label="Back" class="ui-button-success"></button>
-    <button pButton type="button" label="View List" class="ui-button-secondary" routerLink="/dashBoard/encounter-view"></button>
+    <p-splitButton label=" View List" icon="fa fa-list" [model]="items" styleClass="ui-button-secondary"></p-splitButton>
   </div>
   <br><br>
 </div>

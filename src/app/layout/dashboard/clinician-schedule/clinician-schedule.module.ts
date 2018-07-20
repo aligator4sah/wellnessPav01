@@ -4,12 +4,14 @@ import { ClinicianScheduleComponent } from './clinician-schedule.component';
 import {RouterModule} from '@angular/router';
 import {ScheduleModule} from 'primeng/schedule';
 import {ButtonModule} from 'primeng/button';
+import {GrowlModule} from 'primeng/growl';
 
 @NgModule({
   imports: [
     CommonModule,
     ScheduleModule,
     ButtonModule,
+    GrowlModule,
     RouterModule.forChild([
       {path: '', component: ClinicianScheduleComponent}
     ])
@@ -19,6 +21,7 @@ import {ButtonModule} from 'primeng/button';
     CommonModule,
     ScheduleModule,
     ButtonModule,
+    GrowlModule,
     ClinicianScheduleComponent,
     RouterModule
   ]

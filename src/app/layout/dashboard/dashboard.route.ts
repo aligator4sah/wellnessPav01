@@ -1,6 +1,4 @@
 import {DashboardComponent} from './dashboard.component';
-import {EncounterViewModule} from './encounter-view/encounter-view.module';
-import {CreateCAppointmentModule} from './create-c-appointment/create-c-appointment.module';
 
 export const dashboardRoutes = [{
   path: '',
@@ -18,5 +16,6 @@ export const dashboardRoutes = [{
     {path: 'encounter-view', loadChildren: './encounter-view/encounter-view.module#EncounterViewModule'},
     {path: 'patient-appointment', loadChildren: './patient-appointment/patient-appointment.module#PatientAppointmentModule'},
     {path: 'create-c-appointment', loadChildren: './create-c-appointment/create-c-appointment.module#CreateCAppointmentModule'},
+    {path: 'soap-list', loadChildren: './soap-list/soap-list.module#SoapListModule'},
   ],
 }];

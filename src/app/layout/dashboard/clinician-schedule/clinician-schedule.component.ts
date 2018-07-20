@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Message} from 'primeng/api';
 
 @Component({
   selector: 'app-clinician-schedule',
@@ -8,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ClinicianScheduleComponent implements OnInit {
   events: any[];
   header: any;
+  msgs: Message[] = [];
 
   constructor() { }
 
   ngOnInit() {
+
     this.events = [
       {
         "title": "All Day Event",
@@ -41,6 +44,17 @@ export class ClinicianScheduleComponent implements OnInit {
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     };
+  }
+
+
+  handleEvent(e) {
+    this.showInfo();
+  }
+
+
+  showInfo() {
+    this.msgs = [];
+    this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
   }
 
   goBack() {

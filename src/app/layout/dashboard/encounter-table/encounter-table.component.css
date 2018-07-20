@@ -32,3 +32,7 @@ tr, th {
 tr:hover td {
   background-color: #A8E6CF;
 }
+
+.ui-menu {
+  width: 80%;
+}

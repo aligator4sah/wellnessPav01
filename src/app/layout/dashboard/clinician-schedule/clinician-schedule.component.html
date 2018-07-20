@@ -1,7 +1,7 @@
 <div  class="main-container">
   <h2 class="page-title">Schedule Table</h2>
   <div class="ui-g-12">
-    <p-schedule [events]="events" [header]="header" defaultDate="2018-07-06" [eventLimit]="4" [editable]="true"></p-schedule>
+    <p-schedule [events]="events" [header]="header" defaultDate="2018-07-06" [eventLimit]="4" [editable]="true" (onEventClick)="handleEvent($event)"></p-schedule>
   </div>
   <div class="ui-g-12">
     <button pButton type="button" label="Back" (click)="goBack()"></button>
